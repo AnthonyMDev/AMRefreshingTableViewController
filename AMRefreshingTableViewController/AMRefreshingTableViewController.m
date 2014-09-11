@@ -99,27 +99,26 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   [self.dataSource AMRefreshingTableViewController:self
                                listItemsWithOffset:0
                                           quantity:self.listItemsPerPage
-                                 success:^(NSArray *reportList) {
+                                           success:^(NSArray *reportList) {
                         
-                                   __strong typeof(weakSelf) strongSelf = weakSelf;
+                                             __strong typeof(weakSelf) strongSelf = weakSelf;
                         
-                                   strongSelf.listItemsArray = [NSMutableArray arrayWithArray:reportList];
+                                             strongSelf.listItemsArray = [NSMutableArray arrayWithArray:reportList];
                         
-                                   self.lastPageLoaded = 1;
-                                   [strongSelf.tableView reloadData];
-                                   [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
-                                   [self.pullToRefreshView endRefreshing];
+                                             self.lastPageLoaded = 1;
+                                             [strongSelf.tableView reloadData];
+                                             [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
+                                             [self.pullToRefreshView endRefreshing];
                         
-                                 }
+                                           }
+                                           failure:^(NSError *error) {
+                        
+                                             __strong typeof(weakSelf) strongSelf = weakSelf;
 
-                                 failure:^(NSError *error) {
-                        
-                                   __strong typeof(weakSelf) strongSelf = weakSelf;
-
-                                   [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
+                                             [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
                         
 
-                                 }];
+                                           }];
 }
 
 - (void)loadNextItems
@@ -130,29 +129,28 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   [self.dataSource AMRefreshingTableViewController:self
                                listItemsWithOffset:offset
                                           quantity:self.listItemsPerPage
-                                 success:^(NSArray *itemList) {
+                                           success:^(NSArray *itemList) {
                                    
-                                   __strong typeof(weakSelf) strongSelf = weakSelf;
+                                             __strong typeof(weakSelf) strongSelf = weakSelf;
     
-                                   [self.listItemsArray addObjectsFromArray:itemList];
+                                             [self.listItemsArray addObjectsFromArray:itemList];
     
-                                   NSArray *newIndexPaths = [strongSelf newIndexPathsArrayWithItemList:itemList
+                                             NSArray *newIndexPaths = [strongSelf newIndexPathsArrayWithItemList:itemList
                                                                                                      offset:offset];
-    
-                                   [self.tableView insertRowsAtIndexPaths:newIndexPaths
+                                             [self.tableView insertRowsAtIndexPaths:newIndexPaths
                                                             withRowAnimation:UITableViewRowAnimationAutomatic];
                                    
-                                   strongSelf.lastPageLoaded ++;
-                                   [strongSelf.tableView finishInfiniteScroll];
+                                             strongSelf.lastPageLoaded ++;
+                                             [strongSelf.tableView finishInfiniteScroll];
                                    
-                                 }
-                                 failure:^(NSError *error) {
+                                           }
+                                           failure:^(NSError *error) {
                                    
-                                   __strong typeof(weakSelf) strongSelf = weakSelf;
+                                             __strong typeof(weakSelf) strongSelf = weakSelf;
     
-                                   [strongSelf.tableView finishInfiniteScroll];
+                                             [strongSelf.tableView finishInfiniteScroll];
                                    
-                                 }];
+                                           }];
 }
 
 - (NSArray *)newIndexPathsArrayWithItemList:(NSArray *)itemList offset:(NSUInteger)offset
@@ -198,7 +196,8 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 - (void)configureCell:(id)cell atIndexPath:(NSIndexPath *)indexPath
 {
   id <AMRefreshingListItemProtocol> listItem = self.listItemsArray[indexPath.row];
-  [(ALImageCell *)cell setValuesDictionary:[self valuesDictionaryForListItem:listItem]];
+  NSDictionary *valuesDict = [self valuesDictionaryForListItem:listItem];
+  [(ALImageCell *)cell setValuesDictionary:valuesDict];
 }
 
 - (NSDictionary *)valuesDictionaryForListItem:(id <AMRefreshingListItemProtocol>)listItem

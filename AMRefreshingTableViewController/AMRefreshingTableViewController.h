@@ -22,7 +22,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import "AOBaseTableViewController.h"
+#import <UIKit/UIKit.h>
 
 #import <AOPullToRefresh/UITableViewController+AOPullToRefresh.h>
 #import <AutoLayoutCells/ALTableViewCellFactory.h>
@@ -31,11 +31,13 @@
 @protocol AMRefreshingTableViewControllerDelegate;
 @protocol AMRefreshingTableViewControllerDataSource;
 
-@interface AMRefreshingTableViewController : AOBaseTableViewController <ALTableViewCellFactoryDelegate, AOPullToRefreshDelegate>
+@interface AMRefreshingTableViewController : UITableViewController <ALTableViewCellFactoryDelegate, AOPullToRefreshDelegate>
 
 - (instancetype)initWithDataSource:(id <AMRefreshingTableViewControllerDataSource>)dataSource listItemsPerPage:(NSUInteger)listItemsPerPage;
 
 - (void)loadNextItems;
+
+- (void)refreshList;
 
 @property (strong, nonatomic) NSMutableArray *listItemsArray;
 

@@ -10,7 +10,6 @@
 		82427914B50841328A1FAE07 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA13EB9A61460CBA364BFA /* libPods-AMRefreshingTableViewControllerTests.a */; };
 		925E7D7D199D641300BC7170 /* AMRefreshingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925E7D7C199D641300BC7170 /* AMRefreshingTableViewController.m */; };
 		92815B64199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */; };
-		92815B67199D4FF000E8D41F /* MyReports_Multiple.xml in Resources */ = {isa = PBXBuildFile; fileRef = 92815B66199D4FF000E8D41F /* MyReports_Multiple.xml */; };
 		92DEA71E199D44B8004E919A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA71D199D44B8004E919A /* Foundation.framework */; };
 		92DEA72C199D44B8004E919A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA72B199D44B8004E919A /* XCTest.framework */; };
 		92DEA72D199D44B8004E919A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA71D199D44B8004E919A /* Foundation.framework */; };
@@ -53,7 +52,6 @@
 		925E7D7B199D641300BC7170 /* AMRefreshingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewController.h; sourceTree = "<group>"; };
 		925E7D7C199D641300BC7170 /* AMRefreshingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMRefreshingTableViewController.m; sourceTree = "<group>"; };
 		92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMRefreshingTableViewControllerTests.m; sourceTree = "<group>"; };
-		92815B66199D4FF000E8D41F /* MyReports_Multiple.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MyReports_Multiple.xml; sourceTree = "<group>"; };
 		92BCBA0119B8FA0700B835E1 /* AMRefreshingTableViewControllerDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewControllerDataSource.h; sourceTree = "<group>"; };
 		92DEA71A199D44B8004E919A /* libAMRefreshingTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAMRefreshingTableViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DEA71D199D44B8004E919A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,14 +97,6 @@
 				92BCBA0119B8FA0700B835E1 /* AMRefreshingTableViewControllerDataSource.h */,
 			);
 			name = Protocols;
-			sourceTree = "<group>";
-		};
-		92815B65199D4FAB00E8D41F /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				92815B66199D4FF000E8D41F /* MyReports_Multiple.xml */,
-			);
-			name = Data;
 			sourceTree = "<group>";
 		};
 		92DEA711199D44B8004E919A = {
@@ -167,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */,
-				92815B65199D4FAB00E8D41F /* Data */,
 				92DEA734199D44B8004E919A /* Supporting Files */,
 			);
 			path = AMRefreshingTableViewControllerTests;
@@ -257,7 +246,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92DEA738199D44B8004E919A /* InfoPlist.strings in Resources */,
-				92815B67199D4FF000E8D41F /* MyReports_Multiple.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

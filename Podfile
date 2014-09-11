@@ -6,7 +6,6 @@ target "AMRefreshingTableViewController" do
   pod 'AutoLayoutCells', '~> 0.2'
   pod 'MBProgressHUD', '~> 0.8'
   pod 'MBProgressHUD+AOTapToCancel', '~> 0.1'
-  pod 'UIView+AORefreshFont', '~> 1.0'
   pod 'UIScrollView-InfiniteScroll', '~> 0.2'
 end
 
