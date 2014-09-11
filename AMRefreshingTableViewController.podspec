@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.name         = "AMRefreshingTableViewController"
   s.version      = "0.1.0"
   s.summary      = "A table view controller that loads items from an external (networked) data source."
-  s.license      = { :type => "MIT", :file => "LICENSEß" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Anthony Miller" => "AnthonyMDev@gmail.com" }
   s.homepage     = "https://github.com/AnthonyMDev/AMRefreshingTableViewController"
   s.source   	   = { :git => "https://github.com/anthonymdev/amrefreshingtableviewcontroller.git",
