@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.name         = "AMRefreshingTableViewController"
   s.version      = "0.1.0"
-  s.summary      = "A table view controller that displays a list of items recieved from an external data source, utilizing pull to refresh and infinite scroll loading."
+  s.summary      = "A table view controller that loads items from an external (networked) data source."
   s.license      = { :type => "MIT", :file => "LICENSEß" }
   s.author       = { "Anthony Miller" => "AnthonyMDev@gmail.com" }
   s.homepage     = "https://github.com/AnthonyMDev/AMRefreshingTableViewController"
