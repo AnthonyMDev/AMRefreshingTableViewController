@@ -204,23 +204,52 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 {
   NSMutableDictionary *dict = [NSMutableDictionary dictionary];
   
-  if ([listItem itemTitle].length) {
-    dict[ALCellTitleKey] = [listItem itemTitle];
-  }
-  
-  if ([listItem itemSubtitle].length) {
-    dict[ALCellSubtitleKey] = [listItem itemSubtitle];
-  }
-  
-  if ([listItem mainPhotoFileURL]) {
-    dict[ALImageCellMainImageURLKey] = [listItem mainPhotoFileURL];
-  }
-  
-  if ([listItem secondaryPhotoFileURL]) {
-    dict[ALImageCellSecondaryImageURLKey] = [listItem secondaryPhotoFileURL];
-  }
+  [self setTitleForDictionary:dict withListItem:listItem];
+  [self setSubtitleForDictionary:dict withListItem:listItem];
+  [self setMainPhotoForDictionary:dict withListItem:listItem];
+  [self setSecondaryPhotoForDictionary:dict withListItem:listItem];
   
   return dict;
+}
+
+- (void)setTitleForDictionary:(NSMutableDictionary *)dictionary withListItem:(id <AMRefreshingListItemProtocol>)listItem
+{
+  if ([listItem respondsToSelector:@selector(itemTitle)]) {
+    if ([listItem itemTitle].length) {
+      dictionary[ALCellTitleKey] = [listItem itemTitle];
+      
+    }
+  }
+}
+
+- (void)setSubtitleForDictionary:(NSMutableDictionary *)dictionary withListItem:(id <AMRefreshingListItemProtocol>)listItem
+{
+  if ([listItem respondsToSelector:@selector(itemSubtitle)]) {
+    if ([listItem itemSubtitle].length) {
+      dictionary[ALCellSubtitleKey] = [listItem itemSubtitle];
+      
+    }
+  }
+}
+
+- (void)setMainPhotoForDictionary:(NSMutableDictionary *)dictionary withListItem:(id <AMRefreshingListItemProtocol>)listItem
+{
+  if ([listItem respondsToSelector:@selector(mainPhotoFileURL)]) {
+    if ([listItem mainPhotoFileURL]) {
+      dictionary[ALImageCellMainImageURLKey] = [listItem mainPhotoFileURL];
+      
+    }
+  }
+}
+
+- (void)setSecondaryPhotoForDictionary:(NSMutableDictionary *)dictionary withListItem:(id <AMRefreshingListItemProtocol>)listItem
+{
+  if ([listItem respondsToSelector:@selector(secondaryPhotoFileURL)]) {
+    if ([listItem secondaryPhotoFileURL]) {
+      dictionary[ALImageCellSecondaryImageURLKey] = [listItem secondaryPhotoFileURL];
+      
+    }
+  }
 }
 
 #pragma mark - AMPullToRefreshDelegate
