@@ -1,0 +1,217 @@
+<OpenReports>
+  <qty>8</qty>
+  <off>0</off>
+  <report id="2093537">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00078 ]]>
+    </counter>
+    <raw_counter>78</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ 1050 E Sahara Ave ]]>
+    </address>
+    <latitude>36.144366</latitude>
+    <longitude>-115.139847</longitude>
+    <city>Las Vegas</city>
+    <state>NV</state>
+    <dateCreated>2014-06-02 21:24:34.601</dateCreated>
+    <dateCreatedTz>06/02/2014 03:24:34 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>open</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/02/14 03:30 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/02/14 03:24 PM ]]>
+    </detail4>
+    <mainPhoto>4491079</mainPhoto>
+    <dateDetails/>
+  </report>
+  <report id="2093549">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00079 ]]>
+    </counter>
+    <raw_counter>79</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ 1096 E Sahara Ave ]]>
+    </address>
+    <latitude>36.144431</latitude>
+    <longitude>-115.139688</longitude>
+    <city>Las Vegas</city>
+    <state>NV</state>
+    <dateCreated>2014-06-02 21:31:07.773</dateCreated>
+    <dateCreatedTz>06/02/2014 03:31:07 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>new</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/02/14 03:35 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/02/14 03:31 PM ]]>
+    </detail4>
+    <mainPhoto>4491104</mainPhoto>
+  </report>
+  <report id="2093552">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00080 ]]>
+    </counter>
+    <raw_counter>80</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ 1096 E Sahara Ave ]]>
+    </address>
+    <latitude>36.144430</latitude>
+    <longitude>-115.139688</longitude>
+    <city>Las Vegas</city>
+    <state>NV</state>
+    <dateCreated>2014-06-02 21:32:35.298</dateCreated>
+    <dateCreatedTz>06/02/2014 03:32:35 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>new</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/02/14 03:36 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/02/14 03:32 PM ]]>
+    </detail4>
+    <mainPhoto>4491110</mainPhoto>
+  </report>
+  <report id="2093558">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00081 ]]>
+    </counter>
+    <raw_counter>81</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ 1042-1070 NV-589 ]]>
+    </address>
+    <latitude>36.144301</latitude>
+    <longitude>-115.139786</longitude>
+    <city>Las Vegas</city>
+    <state>NV</state>
+    <dateCreated>2014-06-02 21:34:12.839</dateCreated>
+    <dateCreatedTz>06/02/2014 03:34:12 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>new</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/02/14 03:39 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/02/14 03:34 PM ]]>
+    </detail4>
+    <mainPhoto>4491119</mainPhoto>
+  </report>
+  <report id="2093577">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00084 ]]>
+    </counter>
+    <raw_counter>84</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ 1098 E San Francisco Ave ]]>
+    </address>
+    <latitude>36.144311</latitude>
+    <longitude>-115.139545</longitude>
+    <city>Las Vegas</city>
+    <state>NV</state>
+    <dateCreated>2014-06-02 21:55:17.845</dateCreated>
+    <dateCreatedTz>06/02/2014 03:55:17 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>new</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/02/14 04:03 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/02/14 03:55 PM ]]>
+    </detail4>
+    <mainPhoto>4491242</mainPhoto>
+  </report>
+  <report id="2093582">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00085 ]]>
+    </counter>
+    <raw_counter>85</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ 1042-1070 NV-589 ]]>
+    </address>
+    <latitude>36.144329</latitude>
+    <longitude>-115.140048</longitude>
+    <city>Las Vegas</city>
+    <state>NV</state>
+    <dateCreated>2014-06-02 22:02:40.065</dateCreated>
+    <dateCreatedTz>06/02/2014 04:02:40 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>new</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/02/14 04:07 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/02/14 04:02 PM ]]>
+    </detail4>
+    <mainPhoto>4491260</mainPhoto>
+  </report>
+  <report id="2129673">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00095 ]]>
+    </counter>
+    <raw_counter>95</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ null null ]]>
+    </address>
+    <latitude>0.000000</latitude>
+    <longitude>0.000000</longitude>
+    <dateCreated>2014-06-23 19:35:11.001</dateCreated>
+    <dateCreatedTz>06/23/2014 01:35:11 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>new</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/23/14 01:40 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/23/14 01:35 PM ]]>
+    </detail4>
+    <mainPhoto>4579787</mainPhoto>
+  </report>
+  <report id="2129674">
+    <reportType>1186</reportType>
+    <counter>
+      <![CDATA[ YR14-00096 ]]>
+    </counter>
+    <raw_counter>96</raw_counter>
+    <statusIcon>1355883355962.png</statusIcon>
+    <address>
+      <![CDATA[ null null ]]>
+    </address>
+    <latitude>0.000000</latitude>
+    <longitude>0.000000</longitude>
+    <dateCreated>2014-06-23 19:33:33.112</dateCreated>
+    <dateCreatedTz>06/23/2014 01:33:33 PM</dateCreatedTz>
+    <priority>low</priority>
+    <status>new</status>
+    <createdById>117657</createdById>
+    <detail3>
+      <![CDATA[ 06/23/14 01:41 PM ]]>
+    </detail3>
+    <detail4>
+      <![CDATA[ 06/23/14 01:33 PM ]]>
+    </detail4>
+    <mainPhoto>4579789</mainPhoto>
+  </report>
+</OpenReports>

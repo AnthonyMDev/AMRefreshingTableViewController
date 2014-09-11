@@ -1,0 +1,53 @@
+PODS:
+  - ALLabel (1.0.1)
+  - AOBaseControllers (2.0.1)
+  - AOPullToRefresh (0.2.0)
+  - AutoLayoutCells (0.2.1):
+    - AutoLayoutCells/SharedCategories
+    - AutoLayoutCells/TableViewCells
+  - AutoLayoutCells/SharedCategories (0.2.1)
+  - AutoLayoutCells/TableViewCells (0.2.1):
+    - ALLabel (~> 1.0)
+    - AutoLayoutCells/SharedCategories
+    - AutoLayoutTextViews (~> 1.0)
+  - AutoLayoutTextViews (1.1.0)
+  - Expecta (0.3.1)
+  - Expecta+LayoutConstraints (0.1.0):
+    - Expecta (~> 0.3)
+  - MBProgressHUD (0.9)
+  - MBProgressHUD+AOTapToCancel (0.1.0):
+    - MBProgressHUD (~> 0.8)
+  - OCMock (3.1.1)
+  - UIScrollView-InfiniteScroll (0.2.1)
+  - UIView+AORefreshFont (1.0.2)
+  - XMLDictionary (1.4)
+
+DEPENDENCIES:
+  - AOBaseControllers (~> 2.0)
+  - AOPullToRefresh (~> 0.2)
+  - AutoLayoutCells (~> 0.2)
+  - Expecta (~> 0.3)
+  - Expecta+LayoutConstraints (~> 0.1)
+  - MBProgressHUD (~> 0.8)
+  - MBProgressHUD+AOTapToCancel (~> 0.1)
+  - OCMock (~> 3.0)
+  - UIScrollView-InfiniteScroll (~> 0.2)
+  - UIView+AORefreshFont (~> 1.0)
+  - XMLDictionary (~> 1.4)
+
+SPEC CHECKSUMS:
+  ALLabel: 7c62a5f7864b1c7c01c42bbf1c32d815fd6d7700
+  AOBaseControllers: b688306e391560ce8800d9c6bfe67ab16091b2a3
+  AOPullToRefresh: de4f33da07eb70bcc33aa92906488a48a036e925
+  AutoLayoutCells: e5c05010806f61cc57788f9d5384bdb993b56491
+  AutoLayoutTextViews: 9b6ed8710466117db3396e683089b8edb9f48ba3
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  Expecta+LayoutConstraints: c27575a56faf193c10ac989fb825c325831625ff
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  MBProgressHUD+AOTapToCancel: af2198f552ff70115c24bacf90d9bb857ec988cc
+  OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
+  UIScrollView-InfiniteScroll: a852eb144fbc41c64264fedfc56359a8e13a4714
+  UIView+AORefreshFont: 5784113c8c078e76774a7cdf008102e2ef6d49a4
+  XMLDictionary: 735e81b9a043e220b0d24e9d4f16719606f2e0fc
+
+COCOAPODS: 0.33.1

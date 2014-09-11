@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9212C4B1199D842600533314 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212C4B0199D842600533314 /* Foundation.framework */; };
+		9212C4B3199D842600533314 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212C4B2199D842600533314 /* CoreGraphics.framework */; };
+		9212C4B5199D842600533314 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212C4B4199D842600533314 /* UIKit.framework */; };
+		9212C4BB199D842600533314 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9212C4B9199D842600533314 /* InfoPlist.strings */; };
+		9212C4BD199D842600533314 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9212C4BC199D842600533314 /* main.m */; };
+		9212C4C1199D842600533314 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9212C4C0199D842600533314 /* AppDelegate.m */; };
+		9212C4CA199D842600533314 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9212C4C9199D842600533314 /* MasterViewController.m */; };
+		9212C4CF199D842600533314 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9212C4CE199D842600533314 /* Images.xcassets */; };
+		9212C4D6199D842600533314 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212C4D5199D842600533314 /* XCTest.framework */; };
+		9212C4D7199D842600533314 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212C4B0199D842600533314 /* Foundation.framework */; };
+		9212C4D8199D842600533314 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9212C4B4199D842600533314 /* UIKit.framework */; };
+		9212C4E0199D842600533314 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9212C4DE199D842600533314 /* InfoPlist.strings */; };
+		9212C4E2199D842600533314 /* AOReportListTableViewControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9212C4E1199D842600533314 /* AOReportListTableViewControllerDemoTests.m */; };
+		9212C4F4199EAB0E00533314 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9212C4F3199EAB0E00533314 /* MasterViewController.xib */; };
+		9C38E99839574753B1A6C26B /* libPods-AOReportListTableViewControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7206361FB9D04FFD80A63711 /* libPods-AOReportListTableViewControllerDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9212C4D9199D842600533314 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9212C4A5199D842600533314 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9212C4AC199D842600533314;
+			remoteInfo = AOReportListTableViewControllerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C988D7BBFF64E8DB23E11E2 /* Pods-AOReportListTableViewControllerDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AOReportListTableViewControllerDemo.xcconfig"; path = "Pods/Pods-AOReportListTableViewControllerDemo.xcconfig"; sourceTree = "<group>"; };
+		7206361FB9D04FFD80A63711 /* libPods-AOReportListTableViewControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AOReportListTableViewControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9212C4AD199D842600533314 /* AOReportListTableViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOReportListTableViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9212C4B0199D842600533314 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9212C4B2199D842600533314 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9212C4B4199D842600533314 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9212C4B8199D842600533314 /* AOReportListTableViewControllerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOReportListTableViewControllerDemo-Info.plist"; sourceTree = "<group>"; };
+		9212C4BA199D842600533314 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9212C4BC199D842600533314 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9212C4BE199D842600533314 /* AOReportListTableViewControllerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AOReportListTableViewControllerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		9212C4BF199D842600533314 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9212C4C0199D842600533314 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9212C4C8199D842600533314 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		9212C4C9199D842600533314 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		9212C4CE199D842600533314 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9212C4D4199D842600533314 /* AOReportListTableViewControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOReportListTableViewControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9212C4D5199D842600533314 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9212C4DD199D842600533314 /* AOReportListTableViewControllerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AOReportListTableViewControllerDemoTests-Info.plist"; sourceTree = "<group>"; };
+		9212C4DF199D842600533314 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9212C4E1199D842600533314 /* AOReportListTableViewControllerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOReportListTableViewControllerDemoTests.m; sourceTree = "<group>"; };
+		9212C4F3199EAB0E00533314 /* MasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MasterViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9212C4AA199D842600533314 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9212C4B3199D842600533314 /* CoreGraphics.framework in Frameworks */,
+				9212C4B5199D842600533314 /* UIKit.framework in Frameworks */,
+				9212C4B1199D842600533314 /* Foundation.framework in Frameworks */,
+				9C38E99839574753B1A6C26B /* libPods-AOReportListTableViewControllerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9212C4D1199D842600533314 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9212C4D6199D842600533314 /* XCTest.framework in Frameworks */,
+				9212C4D8199D842600533314 /* UIKit.framework in Frameworks */,
+				9212C4D7199D842600533314 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9212C4A4199D842600533314 = {
+			isa = PBXGroup;
+			children = (
+				9212C4B6199D842600533314 /* AOReportListTableViewControllerDemo */,
+				9212C4DB199D842600533314 /* AOReportListTableViewControllerDemoTests */,
+				9212C4AF199D842600533314 /* Frameworks */,
+				9212C4AE199D842600533314 /* Products */,
+				2C988D7BBFF64E8DB23E11E2 /* Pods-AOReportListTableViewControllerDemo.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		9212C4AE199D842600533314 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9212C4AD199D842600533314 /* AOReportListTableViewControllerDemo.app */,
+				9212C4D4199D842600533314 /* AOReportListTableViewControllerDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9212C4AF199D842600533314 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9212C4B0199D842600533314 /* Foundation.framework */,
+				9212C4B2199D842600533314 /* CoreGraphics.framework */,
+				9212C4B4199D842600533314 /* UIKit.framework */,
+				9212C4D5199D842600533314 /* XCTest.framework */,
+				7206361FB9D04FFD80A63711 /* libPods-AOReportListTableViewControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9212C4B6199D842600533314 /* AOReportListTableViewControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9212C4BF199D842600533314 /* AppDelegate.h */,
+				9212C4C0199D842600533314 /* AppDelegate.m */,
+				9212C4C8199D842600533314 /* MasterViewController.h */,
+				9212C4C9199D842600533314 /* MasterViewController.m */,
+				9212C4F3199EAB0E00533314 /* MasterViewController.xib */,
+				9212C4CE199D842600533314 /* Images.xcassets */,
+				9212C4B7199D842600533314 /* Supporting Files */,
+			);
+			path = AOReportListTableViewControllerDemo;
+			sourceTree = "<group>";
+		};
+		9212C4B7199D842600533314 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9212C4B8199D842600533314 /* AOReportListTableViewControllerDemo-Info.plist */,
+				9212C4B9199D842600533314 /* InfoPlist.strings */,
+				9212C4BC199D842600533314 /* main.m */,
+				9212C4BE199D842600533314 /* AOReportListTableViewControllerDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9212C4DB199D842600533314 /* AOReportListTableViewControllerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9212C4E1199D842600533314 /* AOReportListTableViewControllerDemoTests.m */,
+				9212C4DC199D842600533314 /* Supporting Files */,
+			);
+			path = AOReportListTableViewControllerDemoTests;
+			sourceTree = "<group>";
+		};
+		9212C4DC199D842600533314 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9212C4DD199D842600533314 /* AOReportListTableViewControllerDemoTests-Info.plist */,
+				9212C4DE199D842600533314 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9212C4AC199D842600533314 /* AOReportListTableViewControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9212C4E5199D842600533314 /* Build configuration list for PBXNativeTarget "AOReportListTableViewControllerDemo" */;
+			buildPhases = (
+				CFDE144B8B0B44128EF10347 /* Check Pods Manifest.lock */,
+				9212C4A9199D842600533314 /* Sources */,
+				9212C4AA199D842600533314 /* Frameworks */,
+				9212C4AB199D842600533314 /* Resources */,
+				CB5CF6306F9F45DA815B480B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AOReportListTableViewControllerDemo;
+			productName = AOReportListTableViewControllerDemo;
+			productReference = 9212C4AD199D842600533314 /* AOReportListTableViewControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9212C4D3199D842600533314 /* AOReportListTableViewControllerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9212C4E8199D842600533314 /* Build configuration list for PBXNativeTarget "AOReportListTableViewControllerDemoTests" */;
+			buildPhases = (
+				9212C4D0199D842600533314 /* Sources */,
+				9212C4D1199D842600533314 /* Frameworks */,
+				9212C4D2199D842600533314 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9212C4DA199D842600533314 /* PBXTargetDependency */,
+			);
+			name = AOReportListTableViewControllerDemoTests;
+			productName = AOReportListTableViewControllerDemoTests;
+			productReference = 9212C4D4199D842600533314 /* AOReportListTableViewControllerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9212C4A5199D842600533314 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "App-Order, LLC";
+				TargetAttributes = {
+					9212C4D3199D842600533314 = {
+						TestTargetID = 9212C4AC199D842600533314;
+					};
+				};
+			};
+			buildConfigurationList = 9212C4A8199D842600533314 /* Build configuration list for PBXProject "AOReportListTableViewControllerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9212C4A4199D842600533314;
+			productRefGroup = 9212C4AE199D842600533314 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9212C4AC199D842600533314 /* AOReportListTableViewControllerDemo */,
+				9212C4D3199D842600533314 /* AOReportListTableViewControllerDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9212C4AB199D842600533314 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9212C4CF199D842600533314 /* Images.xcassets in Resources */,
+				9212C4BB199D842600533314 /* InfoPlist.strings in Resources */,
+				9212C4F4199EAB0E00533314 /* MasterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9212C4D2199D842600533314 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9212C4E0199D842600533314 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB5CF6306F9F45DA815B480B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-AOReportListTableViewControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFDE144B8B0B44128EF10347 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9212C4A9199D842600533314 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9212C4C1199D842600533314 /* AppDelegate.m in Sources */,
+				9212C4CA199D842600533314 /* MasterViewController.m in Sources */,
+				9212C4BD199D842600533314 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9212C4D0199D842600533314 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9212C4E2199D842600533314 /* AOReportListTableViewControllerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9212C4DA199D842600533314 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9212C4AC199D842600533314 /* AOReportListTableViewControllerDemo */;
+			targetProxy = 9212C4D9199D842600533314 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9212C4B9199D842600533314 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9212C4BA199D842600533314 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9212C4DE199D842600533314 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9212C4DF199D842600533314 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9212C4E3199D842600533314 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9212C4E4199D842600533314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9212C4E6199D842600533314 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C988D7BBFF64E8DB23E11E2 /* Pods-AOReportListTableViewControllerDemo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOReportListTableViewControllerDemo/AOReportListTableViewControllerDemo-Prefix.pch";
+				INFOPLIST_FILE = "AOReportListTableViewControllerDemo/AOReportListTableViewControllerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9212C4E7199D842600533314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C988D7BBFF64E8DB23E11E2 /* Pods-AOReportListTableViewControllerDemo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOReportListTableViewControllerDemo/AOReportListTableViewControllerDemo-Prefix.pch";
+				INFOPLIST_FILE = "AOReportListTableViewControllerDemo/AOReportListTableViewControllerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9212C4E9199D842600533314 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AOReportListTableViewControllerDemo.app/AOReportListTableViewControllerDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOReportListTableViewControllerDemo/AOReportListTableViewControllerDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AOReportListTableViewControllerDemoTests/AOReportListTableViewControllerDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9212C4EA199D842600533314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AOReportListTableViewControllerDemo.app/AOReportListTableViewControllerDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AOReportListTableViewControllerDemo/AOReportListTableViewControllerDemo-Prefix.pch";
+				INFOPLIST_FILE = "AOReportListTableViewControllerDemoTests/AOReportListTableViewControllerDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9212C4A8199D842600533314 /* Build configuration list for PBXProject "AOReportListTableViewControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9212C4E3199D842600533314 /* Debug */,
+				9212C4E4199D842600533314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9212C4E5199D842600533314 /* Build configuration list for PBXNativeTarget "AOReportListTableViewControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9212C4E6199D842600533314 /* Debug */,
+				9212C4E7199D842600533314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9212C4E8199D842600533314 /* Build configuration list for PBXNativeTarget "AOReportListTableViewControllerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9212C4E9199D842600533314 /* Debug */,
+				9212C4EA199D842600533314 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9212C4A5199D842600533314 /* Project object */;
+}
