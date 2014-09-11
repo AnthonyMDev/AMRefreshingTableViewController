@@ -6,7 +6,8 @@ Pod::Spec.new do |s|
   s.summary      = "A table view controller that displays a list of items recieved from an external data source, utilizing pull to refresh and infinite scroll loading."
   s.license      = { :type => "MIT", :file => "LICENSEß" }
   s.author       = { "Anthony Miller" => "AnthonyMDev@gmail.com" }
-  s.source   	 = { :git => "https://github.com/anthonymdev/amrefreshingtableviewcontroller.git",
+  s.homepage     = "https://github.com/AnthonyMDev/AMRefreshingTableViewController"
+  s.source   	   = { :git => "https://github.com/anthonymdev/amrefreshingtableviewcontroller.git",
                      :tag => "#{s.version}"}
   s.frameworks = 'UIKit'
   s.requires_arc = true
