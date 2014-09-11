@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   s.requires_arc = true
 
-  s.dependency 'AMPullToRefresh', '~> 0.1'
+  s.dependency 'AMPullToRefresh', '~> 1.0'
   s.dependency 'AutoLayoutCells', '~> 0.2'
   s.dependency 'MBProgressHUD', '~> 0.8'
   s.dependency 'UIImage+ColorPlaceholder', '~> 1.0'
