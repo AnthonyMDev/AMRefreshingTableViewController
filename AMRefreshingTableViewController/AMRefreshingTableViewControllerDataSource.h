@@ -26,13 +26,17 @@
 
 #import "AMRefreshingTableViewController.h"
 
+/******************************************************************
+ * Operation Success & Failure Block Types
+ ******************************************************************/
+
 /**
  *  This is "success" block that should be returned by the operation manager.
  *
  *  @param operation           The operation
  *  @param reportList          An `NSArray` of objects that conform to this protocol to represent the reports.
  */
-typedef void (^AMRefreshingListOperationSuccessBlock)(NSOperation *operation, NSArray * itemList);
+typedef void (^AMRefreshingListOperationSuccessBlock)(NSArray * itemList);
 
 /**
  *  This is "failure" block that should be returned by the operation manager.
@@ -40,14 +44,32 @@ typedef void (^AMRefreshingListOperationSuccessBlock)(NSOperation *operation, NS
  *  @param operation  The operation
  *  @param error The error that occurred
  */
-typedef void (^AMRefreshingListOperationFailureBlock)(NSOperation *operation, NSError *error);
+typedef void (^AMRefreshingListOperationFailureBlock)(NSError *error);
 
+/******************************************************************
+ * Data Source Protocol
+ ******************************************************************/
+
+/**
+ *  The `AMRefreshingTableViewControllerDataSource` should retrieve the list items to be displayed and return them in an array.
+ */
 @protocol AMRefreshingTableViewControllerDataSource <NSObject>
 
-- (void)AMRefreshingTableView:(AMRefreshingTableViewController *)tableViewController
-          listItemsWithOffset:(NSUInteger)offset
-                     quantity:(NSUInteger)quantity
-                      success:(AMRefreshingListOperationSuccessBlock)success
-                      failure:(AMRefreshingListOperationFailureBlock)failure;
+/**
+ *  This method will be called on the data source when the `AMRefreshingTableViewController` refreshes or needs more list items.
+ *
+ *
+ *
+ *  @param tableViewController The `AMRefreshingTableViewController` requesting the list items
+ *  @param offset              The offset in the items retrieved
+ *  @param quantity            The number of list items to return
+ *  @param success             The success block to be called, returning an `NSArray` of list items that conform to the `AMRefreshingListItemProtocol`.
+ *  @param failure             The failure block to be called, returning an `NSError`
+ */
+- (void)AMRefreshingTableViewController:(AMRefreshingTableViewController *)tableViewController
+                    listItemsWithOffset:(NSUInteger)offset
+                               quantity:(NSUInteger)quantity
+                                success:(AMRefreshingListOperationSuccessBlock)success
+                                failure:(AMRefreshingListOperationFailureBlock)failure;
 
 @end

@@ -96,10 +96,10 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 {
   __weak typeof(self) weakSelf = self;
   
-  [self.dataSource AMRefreshingTableView:self
-                     listItemsWithOffset:0
-                                quantity:self.listItemsPerPage
-                                 success:^(NSOperation *operation, NSArray *reportList) {
+  [self.dataSource AMRefreshingTableViewController:self
+                               listItemsWithOffset:0
+                                          quantity:self.listItemsPerPage
+                                 success:^(NSArray *reportList) {
                         
                                    __strong typeof(weakSelf) strongSelf = weakSelf;
                         
@@ -112,7 +112,7 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
                         
                                  }
 
-                                 failure:^(NSOperation *operation, NSError *error) {
+                                 failure:^(NSError *error) {
                         
                                    __strong typeof(weakSelf) strongSelf = weakSelf;
 
@@ -127,10 +127,10 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   NSUInteger offset = self.lastPageLoaded * self.listItemsPerPage;
   
   __weak typeof(self) weakSelf = self;
-  [self.dataSource AMRefreshingTableView:self
-                    listItemsWithOffset:offset
-                                quantity:self.listItemsPerPage
-                                 success:^(NSOperation *operation, NSArray *itemList) {
+  [self.dataSource AMRefreshingTableViewController:self
+                               listItemsWithOffset:offset
+                                          quantity:self.listItemsPerPage
+                                 success:^(NSArray *itemList) {
                                    
                                    __strong typeof(weakSelf) strongSelf = weakSelf;
     
@@ -146,7 +146,7 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
                                    [strongSelf.tableView finishInfiniteScroll];
                                    
                                  }
-                                 failure:^(NSOperation *operation, NSError *error) {
+                                 failure:^(NSError *error) {
                                    
                                    __strong typeof(weakSelf) strongSelf = weakSelf;
     

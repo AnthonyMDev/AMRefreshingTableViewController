@@ -23,14 +23,14 @@
 //  THE SOFTWARE.
 
 // Test Class
-#import "AOReportListTableViewController.h"
+#import "AMRefreshingTableViewController.h"
 
 // Collaborators
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <UIScrollView-InfiniteScroll/UIScrollView+InfiniteScroll.h>
 #import <XMLDictionary/XMLDictionary.h>
 
-#import "AOReportListTableViewControllerDataSource.h"
+#import "AMRefreshingTableViewControllerDataSource.h"
 
 // Test Support
 #import <XCTest/XCTest.h>
@@ -40,18 +40,18 @@
 
 #import <OCMock/OCMock.h>
 
-@interface AOReportListTableViewControllerTests : XCTestCase
+@interface AMRefreshingTableViewControllerTests : XCTestCase
 @end
 
-@implementation AOReportListTableViewControllerTests
+@implementation AMRefreshingTableViewControllerTests
 {
-  AOReportListTableViewController *sut;
+  AMRefreshingTableViewController *sut;
   UINavigationController *navController;
   id mockSUT;
   id mockTableView;
   id dataSource;
   id mockProgressHUD;
-  NSMutableArray *reportsArray;
+  NSMutableArray *listItemsArray;
 }
 
 #pragma mark - Test Lifecycle
@@ -60,7 +60,7 @@
 {
   [super setUp];
   
-  sut = [[AOReportListTableViewController alloc] initWithDataSource:nil reportsPerPage:15];
+  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:nil listItemsPerPage:15];
   navController = [[UINavigationController alloc] initWithRootViewController:sut];
   mockSUT = OCMPartialMock(sut);
   mockTableView = OCMPartialMock(sut.tableView);
@@ -74,27 +74,35 @@
 
 - (void)givenDataSource
 {
-  dataSource = OCMProtocolMock(@protocol(AOReportListTableViewControllerDataSource));
+  dataSource = OCMProtocolMock(@protocol(AMRefreshingTableViewControllerDataSource));
   
-  OCMStub([dataSource reportListTableViewController:sut reportListWithOffset:0 quantity:sut.reportsPerPage success:[OCMArg any] failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
+  OCMStub([dataSource AMRefreshingTableViewController:sut
+                                  listItemsWithOffset:0
+                                             quantity:sut.listItemsPerPage
+                                              success:[OCMArg any]
+                                              failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
     
-    AOReportListOperationSuccessBlock success;
+    AMRefreshingListOperationSuccessBlock success;
     
     [invocation getArgument:&success atIndex:5];
-    [self givenReportsArray];
+    [self givenListItemsArray];
     
-    success(nil, reportsArray);
+    success(listItemsArray);
     
   });
   
-  OCMStub([dataSource reportListTableViewController:sut reportListWithOffset:15 quantity:sut.reportsPerPage success:[OCMArg any] failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
+  OCMStub([dataSource AMRefreshingTableViewController:sut
+                                 listItemsWithOffset:15
+                                             quantity:sut.listItemsPerPage
+                                              success:[OCMArg any]
+                                              failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
     
-    AOReportListOperationSuccessBlock success;
+    AMRefreshingListOperationSuccessBlock success;
     
     [invocation getArgument:&success atIndex:5];
-    [self givenReportsArray];
+    [self givenListItemsArray];
     
-    success(nil, reportsArray);
+    success(listItemsArray);
     
   });
 
@@ -104,26 +112,30 @@
 
 - (void)givenDataSourceWithFailure
 {
-  dataSource = OCMProtocolMock(@protocol(AOReportListTableViewControllerDataSource));
+  dataSource = OCMProtocolMock(@protocol(AMRefreshingTableViewControllerDataSource));
   
-  OCMStub([dataSource reportListTableViewController:sut reportListWithOffset:0 quantity:sut.reportsPerPage success:[OCMArg any] failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
+  OCMStub([dataSource AMRefreshingTableViewController:sut
+                                  listItemsWithOffset:0
+                                             quantity:sut.listItemsPerPage
+                                              success:[OCMArg any]
+                                              failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
     
-    AOReportListOperationFailureBlock failure;
+    AMRefreshingListOperationFailureBlock failure;
     
     [invocation getArgument:&failure atIndex:6];
     
     NSError *error = [NSError errorWithDomain:@"test" code:1 userInfo:nil];
-    failure(nil, error);
+    failure(error);
     
   });
   
   sut.dataSource = dataSource;
 }
 
-- (void)givenReportsArray
+- (void)givenListItemsArray
 {
   NSData *data = [self dataFromFileName:@"MyReports_Multiple" type:@"xml"];
-  [self reportsArrayFromData:data];
+  [self listItemsArrayFromData:data];
 }
 
 - (NSData *)dataFromFileName:(NSString *)fileName type:(NSString *)type
@@ -133,19 +145,19 @@
   return [NSData dataWithContentsOfFile:path];
 }
 
-- (void)reportsArrayFromData:(NSData *)data
+- (void)listItemsArrayFromData:(NSData *)data
 {
   XMLDictionaryParser *parser = [[XMLDictionaryParser alloc] init];
   NSDictionary *dict = [parser dictionaryWithData:data];
   
-  reportsArray = [NSMutableArray array];
+  listItemsArray = [NSMutableArray array];
   
   for (NSDictionary *report in dict[@"report"]) {
     
-    [reportsArray addObject:report];
+    [listItemsArray addObject:report];
     
   }
-  expect(reportsArray.count).to.beGreaterThan(0);
+  expect(listItemsArray.count).to.beGreaterThan(0);
 }
 
 #pragma mark - Object Lifecycle - Tests
@@ -153,7 +165,7 @@
 - (void)test___initsWithDataSource
 {
   // when
-  sut = [[AOReportListTableViewController alloc] initWithDataSource:dataSource reportsPerPage:10];
+  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:dataSource listItemsPerPage:10];
   
   // then
   expect(sut.dataSource).to.equal(dataSource);
@@ -161,7 +173,7 @@
 
 - (void)test___initsWith_reportsPerPage
 {
-  expect(sut.reportsPerPage).to.equal(15);
+  expect(sut.listItemsPerPage).to.equal(15);
 }
 
 #pragma mark - View Lifecycle - Tests
@@ -199,14 +211,18 @@
 - (void)test___viewDidLoad___loadsReportsWithOffsetZero
 {
   // then
-  OCMVerify([dataSource reportListTableViewController:sut reportListWithOffset:0 quantity:sut.reportsPerPage success:[OCMArg any] failure:[OCMArg any]]);
+  OCMVerify([dataSource AMRefreshingTableViewController:sut
+                                    listItemsWithOffset:0
+                                               quantity:sut.listItemsPerPage
+                                                success:[OCMArg any]
+                                                failure:[OCMArg any]]);
 }
 
 - (void)test___viewDidLoad___givenSuccess_setsUpReportStubsArray
 {
   // then
-  expect(sut.reportStubsArray).to.equal(reportsArray);
-  expect(sut.reportStubsArray.count).to.equal(8);
+  expect(sut.listItemsArray).to.equal(listItemsArray);
+  expect(sut.listItemsArray.count).to.equal(8);
   expect(sut.lastPageLoaded = 1);
 }
 
@@ -243,7 +259,7 @@
 - (void)test___loadNextReports___changesLastPageLoaded
 {
   // when
-  [sut loadNextReports];
+  [sut loadNextItems];
   
   // then
   expect(sut.lastPageLoaded).to.equal(2);
@@ -252,10 +268,10 @@
 - (void)test___loadNextReports___addsNewReportStubsToArray
 {
   // when
-  [sut loadNextReports];
+  [sut loadNextItems];
   
   // then
-  expect(sut.reportStubsArray.count).to.equal(16);
+  expect(sut.listItemsArray.count).to.equal(16);
 }
 
 #pragma mark - UITableViewDataSource - Tests

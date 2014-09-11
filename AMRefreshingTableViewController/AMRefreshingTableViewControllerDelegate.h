@@ -29,10 +29,16 @@
 @protocol AMRefreshingListItemProtocol;
 
 /**
- *  The delegate of any list view controller must implement these methods to handle the selection of reports from a list. Usually, the delegate will display the selected report.
+ *  The delegate of an `AMRefreshingTableViewController` should handle to selection of a list item.
  */
 @protocol AMRefreshingTableViewControllerDelegate <NSObject>
 
+/**
+ *  This delegate method will be called when `tableView:didSelectRowAtIndexPath:` is called on the `AMRefreshingTableViewController`, returning the list item for the selected row.
+ *
+ *  @param controller The `AMRefreshingTableViewController`
+ *  @param listItem   The list item that was selected
+ */
 - (void)controller:(AMRefreshingTableViewController *)controller didSelectListItem:(id <AMRefreshingListItemProtocol>)listItem;
 
 @end

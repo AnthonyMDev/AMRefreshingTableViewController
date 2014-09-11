@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		82427914B50841328A1FAE07 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA13EB9A61460CBA364BFA /* libPods-AMRefreshingTableViewControllerTests.a */; };
-		8EFE0A9A56624B96BA74CD46 /* libPods-AOReportListViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B44C1CE15449FC8228D101 /* libPods-AOReportListViewControllerTests.a */; };
 		925E7D7D199D641300BC7170 /* AMRefreshingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925E7D7C199D641300BC7170 /* AMRefreshingTableViewController.m */; };
 		92815B64199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */; };
 		92815B67199D4FF000E8D41F /* MyReports_Multiple.xml in Resources */ = {isa = PBXBuildFile; fileRef = 92815B66199D4FF000E8D41F /* MyReports_Multiple.xml */; };
@@ -49,7 +48,6 @@
 		1BD5E626E1A34D9CB1AFC5F5 /* Pods-AMRefreshingTableViewControllerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewControllerTests.xcconfig"; path = "Pods/Pods-AMRefreshingTableViewControllerTests.xcconfig"; sourceTree = "<group>"; };
 		7869EA3752284568833E53C5 /* libPods-AMRefreshingTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMRefreshingTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B44C1CE15449FC8228D101 /* libPods-AOReportListViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AOReportListViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		844095614FDB4CBAAD0405DE /* Pods-AMRefreshingListViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingListViewController.xcconfig"; path = "Pods/Pods-AMRefreshingListViewController.xcconfig"; sourceTree = "<group>"; };
 		920B102D19B79A990067D699 /* AMRefreshingTableViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewControllerDelegate.h; sourceTree = "<group>"; };
 		92375E4119B65CA40096FB95 /* AMRefreshingListItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRefreshingListItemProtocol.h; sourceTree = "<group>"; };
 		925E7D7B199D641300BC7170 /* AMRefreshingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewController.h; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 		92DEA735199D44B8004E919A /* AMRefreshingTableViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AMRefreshingTableViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		92DEA737199D44B8004E919A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B178F3A4E6EC47CABCEFF163 /* libPods-AOReportListViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AOReportListViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D501241F3ED343818524FFB3 /* Pods-AMRefreshingListViewControllerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingListViewControllerTests.xcconfig"; path = "Pods/Pods-AMRefreshingListViewControllerTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +84,6 @@
 				92DEA72C199D44B8004E919A /* XCTest.framework in Frameworks */,
 				92DEA72F199D44B8004E919A /* UIKit.framework in Frameworks */,
 				92DEA72D199D44B8004E919A /* Foundation.framework in Frameworks */,
-				8EFE0A9A56624B96BA74CD46 /* libPods-AOReportListViewControllerTests.a in Frameworks */,
 				82427914B50841328A1FAE07 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,8 +116,6 @@
 				92DEA733199D44B8004E919A /* AMRefreshingTableViewControllerTests */,
 				92DEA71C199D44B8004E919A /* Frameworks */,
 				92DEA71B199D44B8004E919A /* Products */,
-				844095614FDB4CBAAD0405DE /* Pods-AMRefreshingListViewController.xcconfig */,
-				D501241F3ED343818524FFB3 /* Pods-AMRefreshingListViewControllerTests.xcconfig */,
 				12A2093FE1034FC7B0A340CF /* Pods-AMRefreshingTableViewController.xcconfig */,
 				1BD5E626E1A34D9CB1AFC5F5 /* Pods-AMRefreshingTableViewControllerTests.xcconfig */,
 			);
@@ -446,7 +440,7 @@
 				DSTROOT = /tmp/AOReportListViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AMRefreshingTableViewController;
 				SKIP_INSTALL = YES;
 			};
@@ -459,7 +453,7 @@
 				DSTROOT = /tmp/AOReportListViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AMRefreshingTableViewController;
 				SKIP_INSTALL = YES;
 			};
@@ -475,12 +469,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AOReportListViewController/AOReportListViewController-Prefix.pch";
+				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "AOReportListViewControllerTests/AOReportListViewControllerTests-Info.plist";
+				INFOPLIST_FILE = "AMRefreshingTableViewControllerTests/AMRefreshingTableViewControllerTests-Info.plist";
 				PRODUCT_NAME = AMRefreshingTableViewControllerTests;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -496,8 +490,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AOReportListViewController/AOReportListViewController-Prefix.pch";
-				INFOPLIST_FILE = "AOReportListViewControllerTests/AOReportListViewControllerTests-Info.plist";
+				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
+				INFOPLIST_FILE = "AMRefreshingTableViewControllerTests/AMRefreshingTableViewControllerTests-Info.plist";
 				PRODUCT_NAME = AMRefreshingTableViewControllerTests;
 				WRAPPER_EXTENSION = xctest;
 			};

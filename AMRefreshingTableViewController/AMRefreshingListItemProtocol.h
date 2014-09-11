@@ -24,36 +24,36 @@
 //
 
 /**
- *  Any object that represents a report item to be displayed in a report list must conform to this protocol.
+ *  This protocol defines methods that can be implemented by a list item to be displayed in an `AMRefreshingTableViewController` to configure the display of the item in the table view.
  */
 @protocol AMRefreshingListItemProtocol <NSObject>
 
 @optional
 /**
- *  Returns the title to display for the report
+ *  Returns the title to display for the list item
  *s
- *  @return An `NSString` with a title for the report
+ *  @return An `NSString` with a title for the list item
  */
 - (NSString *)itemTitle;
 
 /**
- *  Returns the status of the report to display
+ *  Returns the subtitle of the list item to display
  *
- *  @return An `NSString` with the status for the report
+ *  @return An `NSString` with a subtitle for the list item
  */
 - (NSString *)itemSubtitle;
 
 /**
- *  Returns the report's main photo file URL
+ *  Returns the list item's main photo file URL
  *
- *  @return An `NSString` with the file URL for the report's main image
+ *  @return An `NSString` with the file URL for the list item's main image
  */
 - (NSURL *)mainPhotoFileURL;
 
 /**
- *  Returns the report's status icon photo file URL
+ *  Returns the list item's secondary photo file URL
  *
- *  @return An `NSString` with the file URL for the report's main image
+ *  @return An `NSString` with the file URL for the list item's secondary photo
  */
 - (NSURL *)secondaryPhotoFileURL;
 
