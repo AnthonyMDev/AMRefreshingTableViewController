@@ -223,9 +223,9 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   return dict;
 }
 
-#pragma mark - AOPullToRefreshDelegate
+#pragma mark - AMPullToRefreshDelegate
 
-- (void)refreshViewDidBeginRefreshing:(AOPullToRefreshView *)pullToRefreshView
+- (void)refreshViewDidBeginRefreshing:(AMPullToRefreshView *)pullToRefreshView
 {
   [self refreshList];
 }

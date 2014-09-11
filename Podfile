@@ -1,11 +1,9 @@
 platform :ios, "7.0"
 
 target "AMRefreshingTableViewController" do
-  pod 'AOBaseControllers', '~> 2.0'
-  pod 'AOPullToRefresh', '~> 0.2'
+  pod 'AMPullToRefresh', '~> 1.0'
   pod 'AutoLayoutCells', '~> 0.2'
   pod 'MBProgressHUD', '~> 0.8'
-  pod 'MBProgressHUD+AOTapToCancel', '~> 0.1'
   pod 'UIScrollView-InfiniteScroll', '~> 0.2'
 end
 

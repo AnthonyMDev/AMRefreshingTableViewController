@@ -24,14 +24,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import <AOPullToRefresh/UITableViewController+AOPullToRefresh.h>
+#import <AMPullToRefresh/UITableViewController+AMPullToRefresh.h>
 #import <AutoLayoutCells/ALTableViewCellFactory.h>
 #import <AutoLayoutCells/ALTableViewCellFactoryDelegate.h>
 
 @protocol AMRefreshingTableViewControllerDelegate;
 @protocol AMRefreshingTableViewControllerDataSource;
 
-@interface AMRefreshingTableViewController : UITableViewController <ALTableViewCellFactoryDelegate, AOPullToRefreshDelegate>
+@interface AMRefreshingTableViewController : UITableViewController <ALTableViewCellFactoryDelegate, AMPullToRefreshDelegate>
 
 - (instancetype)initWithDataSource:(id <AMRefreshingTableViewControllerDataSource>)dataSource listItemsPerPage:(NSUInteger)listItemsPerPage;
 

@@ -336,7 +336,7 @@
   OCMVerify([mockCell setValuesDictionary:expectedDict]);
 }
 
-#pragma mark - AOPullToRefreshDelegate - Tests
+#pragma mark - AMPullToRefreshDelegate - Tests
 
 - (void)test___refreshViewDidBeginRefreshing_refreshesListItems
 {
