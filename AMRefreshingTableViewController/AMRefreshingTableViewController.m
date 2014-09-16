@@ -63,10 +63,14 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   [self setUpInfiniteScroll];
   [self setUpCellFactory];
   
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
   if (self.dataSource) {
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [self refreshList];
-
+    
   }
 }
 
@@ -197,7 +201,7 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 {
   id <AMRefreshingListItemProtocol> listItem = self.listItemsArray[indexPath.row];
   NSDictionary *valuesDict = [self valuesDictionaryForListItem:listItem];
-  [(ALImageCell *)cell setValuesDictionary:valuesDict];
+  [(ALImageCell *)cell setValuesFromDictionary:valuesDict];
 }
 
 - (NSDictionary *)valuesDictionaryForListItem:(id <AMRefreshingListItemProtocol>)listItem

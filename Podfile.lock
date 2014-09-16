@@ -1,11 +1,11 @@
 PODS:
   - ALLabel (1.0.1)
   - AMPullToRefresh (1.0.0)
-  - AutoLayoutCells (0.2.1):
+  - AutoLayoutCells (0.4.0):
     - AutoLayoutCells/SharedCategories
     - AutoLayoutCells/TableViewCells
-  - AutoLayoutCells/SharedCategories (0.2.1)
-  - AutoLayoutCells/TableViewCells (0.2.1):
+  - AutoLayoutCells/SharedCategories (0.4.0)
+  - AutoLayoutCells/TableViewCells (0.4.0):
     - ALLabel (~> 1.0)
     - AutoLayoutCells/SharedCategories
     - AutoLayoutTextViews (~> 1.0)
@@ -31,7 +31,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ALLabel: 7c62a5f7864b1c7c01c42bbf1c32d815fd6d7700
   AMPullToRefresh: 339a199d50ae02a7a2a73bdf08824133200aea70
-  AutoLayoutCells: e5c05010806f61cc57788f9d5384bdb993b56491
+  AutoLayoutCells: ba60ad366b6e4f06e4978676e82cea12bf897d8d
   AutoLayoutTextViews: 9b6ed8710466117db3396e683089b8edb9f48ba3
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   Expecta+LayoutConstraints: c27575a56faf193c10ac989fb825c325831625ff
