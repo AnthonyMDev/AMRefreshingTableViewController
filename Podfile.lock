@@ -1,11 +1,11 @@
 PODS:
   - ALLabel (1.0.1)
   - AMPullToRefresh (1.0.0)
-  - AutoLayoutCells (0.4.0):
+  - AutoLayoutCells (0.4.2):
     - AutoLayoutCells/SharedCategories
     - AutoLayoutCells/TableViewCells
-  - AutoLayoutCells/SharedCategories (0.4.0)
-  - AutoLayoutCells/TableViewCells (0.4.0):
+  - AutoLayoutCells/SharedCategories (0.4.2)
+  - AutoLayoutCells/TableViewCells (0.4.2):
     - ALLabel (~> 1.0)
     - AutoLayoutCells/SharedCategories
     - AutoLayoutTextViews (~> 1.0)
@@ -15,7 +15,7 @@ PODS:
     - Expecta (~> 0.3)
   - MBProgressHUD (0.9)
   - OCMock (3.1.1)
-  - UIScrollView-InfiniteScroll (0.2.1)
+  - UIScrollView-InfiniteScroll (0.3.0)
   - XMLDictionary (1.4)
 
 DEPENDENCIES:
@@ -31,13 +31,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ALLabel: 7c62a5f7864b1c7c01c42bbf1c32d815fd6d7700
   AMPullToRefresh: 339a199d50ae02a7a2a73bdf08824133200aea70
-  AutoLayoutCells: ba60ad366b6e4f06e4978676e82cea12bf897d8d
+  AutoLayoutCells: 85214dcf417304247fe742d9ae7b1c8294acc51e
   AutoLayoutTextViews: 9b6ed8710466117db3396e683089b8edb9f48ba3
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   Expecta+LayoutConstraints: c27575a56faf193c10ac989fb825c325831625ff
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
-  UIScrollView-InfiniteScroll: a852eb144fbc41c64264fedfc56359a8e13a4714
+  UIScrollView-InfiniteScroll: 5768f2be66d9eaf062e1b113060e29706555aecb
   XMLDictionary: 735e81b9a043e220b0d24e9d4f16719606f2e0fc
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4

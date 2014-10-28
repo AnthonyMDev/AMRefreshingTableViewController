@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
   s.dependency 'AMPullToRefresh', '~> 1.0'
   s.dependency 'AutoLayoutCells', '~> 0.2'
   s.dependency 'MBProgressHUD', '~> 0.8'
-  s.dependency 'UIImage+ColorPlaceholder', '~> 1.0'
   s.dependency 'UIScrollView-InfiniteScroll', '~> 0.2'
 
   s.resource_bundles = {'AMRefreshingTableViewController' => ['AMRefreshingTableViewController/ResourcesBundle/*/*']}
