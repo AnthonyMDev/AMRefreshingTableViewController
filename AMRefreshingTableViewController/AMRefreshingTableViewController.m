@@ -109,10 +109,10 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
                         
                                              strongSelf.listItemsArray = [NSMutableArray arrayWithArray:reportList];
                         
-                                             self.lastPageLoaded = 1;
+                                             strongSelf.lastPageLoaded = 1;
                                              [strongSelf.tableView reloadData];
                                              [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
-                                             [self.pullToRefreshView endRefreshing];
+                                             [strongSelf.pullToRefreshView endRefreshing];
                         
                                            }
                                            failure:^(NSError *error) {
@@ -120,9 +120,20 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
 
                                              [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
-                        
+                                             [strongSelf.pullToRefreshView endRefreshing];
+                                             [strongSelf displayRefreshFailureAlert];
 
                                            }];
+}
+
+- (void)displayRefreshFailureAlert
+{
+  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                      message:@"There was an error while trying to refresh. Please try again."
+                                                     delegate:nil
+                                            cancelButtonTitle:nil
+                                            otherButtonTitles:@"Ok", nil];
+  [alertView show];
 }
 
 - (void)loadNextItems
