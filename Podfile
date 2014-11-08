@@ -2,7 +2,7 @@ platform :ios, "7.0"
 
 target "AMRefreshingTableViewController" do
   pod 'AMPullToRefresh', '~> 1.0'
-  pod 'AutoLayoutCells', '~> 0.2'
+  pod 'AutoLayoutCells', '~> 0.4'
   pod 'MBProgressHUD', '~> 0.8'
   pod 'UIScrollView-InfiniteScroll', '~> 0.2'
 end

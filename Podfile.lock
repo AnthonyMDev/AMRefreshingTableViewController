@@ -9,7 +9,7 @@ PODS:
     - ALLabel (~> 1.0)
     - AutoLayoutCells/SharedCategories
     - AutoLayoutTextViews (~> 1.0)
-  - AutoLayoutTextViews (1.1.0)
+  - AutoLayoutTextViews (1.1.1)
   - Expecta (0.3.1)
   - Expecta+LayoutConstraints (0.1.0):
     - Expecta (~> 0.3)
@@ -20,7 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - AMPullToRefresh (~> 1.0)
-  - AutoLayoutCells (~> 0.2)
+  - AutoLayoutCells (~> 0.4)
   - Expecta (~> 0.3)
   - Expecta+LayoutConstraints (~> 0.1)
   - MBProgressHUD (~> 0.8)
@@ -32,7 +32,7 @@ SPEC CHECKSUMS:
   ALLabel: 7c62a5f7864b1c7c01c42bbf1c32d815fd6d7700
   AMPullToRefresh: 339a199d50ae02a7a2a73bdf08824133200aea70
   AutoLayoutCells: 85214dcf417304247fe742d9ae7b1c8294acc51e
-  AutoLayoutTextViews: 9b6ed8710466117db3396e683089b8edb9f48ba3
+  AutoLayoutTextViews: 955f34ca57834fde02568390da36b6fb4163707d
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   Expecta+LayoutConstraints: c27575a56faf193c10ac989fb825c325831625ff
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
