@@ -330,10 +330,10 @@
   
   // when
   id mockCell = OCMClassMock([ALImageCell class]);
-  [sut configureCell:mockCell atIndexPath:indexPath];
+  [sut tableView:sut.tableView configureCell:mockCell atIndexPath:indexPath];
   
   // then
-  OCMVerify([mockCell setValuesDictionary:expectedDict]);
+  OCMVerify([mockCell setValuesFromDictionary:expectedDict]);
 }
 
 #pragma mark - AMPullToRefreshDelegate - Tests

@@ -1,26 +1,26 @@
 PODS:
-  - ALLabel (1.0.1)
+  - ALLabel (2.0.0)
   - AMPullToRefresh (1.0.0)
-  - AutoLayoutCells (0.4.2):
+  - AutoLayoutCells (0.6.0):
+    - AutoLayoutCells/SharedCategories (= 0.6.0)
+    - AutoLayoutCells/TableViewCells (= 0.6.0)
+  - AutoLayoutCells/SharedCategories (0.6.0)
+  - AutoLayoutCells/TableViewCells (0.6.0):
+    - ALLabel (~> 2.0)
     - AutoLayoutCells/SharedCategories
-    - AutoLayoutCells/TableViewCells
-  - AutoLayoutCells/SharedCategories (0.4.2)
-  - AutoLayoutCells/TableViewCells (0.4.2):
-    - ALLabel (~> 1.0)
-    - AutoLayoutCells/SharedCategories
-    - AutoLayoutTextViews (~> 1.0)
+    - AutoLayoutTextViews (~> 1.1)
   - AutoLayoutTextViews (1.1.1)
   - Expecta (0.3.1)
   - Expecta+LayoutConstraints (0.1.0):
     - Expecta (~> 0.3)
   - MBProgressHUD (0.9)
   - OCMock (3.1.1)
-  - UIScrollView-InfiniteScroll (0.3.0)
+  - UIScrollView-InfiniteScroll (0.5.1)
   - XMLDictionary (1.4)
 
 DEPENDENCIES:
   - AMPullToRefresh (~> 1.0)
-  - AutoLayoutCells (~> 0.4)
+  - AutoLayoutCells (~> 0.6)
   - Expecta (~> 0.3)
   - Expecta+LayoutConstraints (~> 0.1)
   - MBProgressHUD (~> 0.8)
@@ -29,15 +29,15 @@ DEPENDENCIES:
   - XMLDictionary (~> 1.4)
 
 SPEC CHECKSUMS:
-  ALLabel: 7c62a5f7864b1c7c01c42bbf1c32d815fd6d7700
+  ALLabel: 1648e80a140ce2727bd93a1fd8ead1939d5ce12b
   AMPullToRefresh: 339a199d50ae02a7a2a73bdf08824133200aea70
-  AutoLayoutCells: 85214dcf417304247fe742d9ae7b1c8294acc51e
+  AutoLayoutCells: 7e5f70dc857f4b57b7f296eb482aab907e2561ee
   AutoLayoutTextViews: 955f34ca57834fde02568390da36b6fb4163707d
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   Expecta+LayoutConstraints: c27575a56faf193c10ac989fb825c325831625ff
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
-  UIScrollView-InfiniteScroll: 5768f2be66d9eaf062e1b113060e29706555aecb
+  UIScrollView-InfiniteScroll: c0ac8b4eece15d7c811622da605151cbd22db7f5
   XMLDictionary: 735e81b9a043e220b0d24e9d4f16719606f2e0fc
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.35.0

@@ -185,15 +185,6 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   return self.listItemsArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  UITableViewCell *cell = nil;
-  
-  cell = [self.cellFactory cellWithIdentifier:AMRefreshingListItemCellIdentifier forIndexPath:indexPath];
-  
-  return cell;
-}
-
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -208,7 +199,12 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 
 #pragma mark - ALCellFactoryDelegate
 
-- (void)configureCell:(id)cell atIndexPath:(NSIndexPath *)indexPath
+- (NSString *)tableView:(UITableView *)tableView identifierForCellAtIndexPath:(NSIndexPath *)indexPath
+{
+  return AMRefreshingListItemCellIdentifier;
+}
+
+- (void)tableView:(UITableView *)tableView configureCell:(id)cell atIndexPath:(NSIndexPath *)indexPath
 {
   id <AMRefreshingListItemProtocol> listItem = self.listItemsArray[indexPath.row];
   NSDictionary *valuesDict = [self valuesDictionaryForListItem:listItem];

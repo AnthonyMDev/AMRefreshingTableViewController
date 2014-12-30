@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = '7.0'
   s.name         = "AMRefreshingTableViewController"
-  s.version      = "0.2.2"
+  s.version      = "0.2.3"
   s.summary      = "A table view controller that loads items from an external (networked) data source."
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Anthony Miller" => "AnthonyMDev@gmail.com" }
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency 'AMPullToRefresh', '~> 1.0'
-  s.dependency 'AutoLayoutCells', '~> 0.4'
+  s.dependency 'AutoLayoutCells', '~> 0.6'
   s.dependency 'MBProgressHUD', '~> 0.8'
   s.dependency 'UIScrollView-InfiniteScroll', '~> 0.2'
 
