@@ -187,11 +187,6 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  return [self.cellFactory cellHeightForIdentifier:AMRefreshingListItemCellIdentifier atIndexPath:indexPath];
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   [self.delegate controller:self didSelectListItem:self.listItemsArray[indexPath.row]];
