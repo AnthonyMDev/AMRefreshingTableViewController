@@ -36,6 +36,7 @@
 #import "AMRefreshingListItemProtocol.h"
 #import "AMRefreshingTableViewControllerDataSource.h"
 #import "AMRefreshingTableViewControllerDelegate.h"
+#import "AMRefreshingTableViewController_TestExtension.h"
 
 // Test Support
 #import <XCTest/XCTest.h>
@@ -190,11 +191,6 @@
   OCMVerify([mockSUT setUpPullToRefreshView]);
 }
 
-- (void)test___viewDidLoad___setsUpInfiniteScroll
-{
-  OCMVerify([mockTableView addInfiniteScrollWithHandler:[OCMArg any]]);
-}
-
 - (void)test___viewDidLoad___setsUpCellFactory
 {
   // then
@@ -202,21 +198,43 @@
   expect(sut.cellFactory.delegate).to.equal(sut);
 }
 
-- (void)test___viewDidLoad___showsProgressHUD
+- (void)test___viewWillAppear__givenDataSource_refreshesList
+{
+  // when
+  [sut viewWillAppear:YES];
+  
+  // then
+  OCMVerify([mockSUT refreshList]);
+}
+
+- (void)test___viewWillAppear__givenNoDataSource_doesNotRefreshList
+{
+  // given
+  sut.dataSource = nil;
+  [[mockSUT reject] refreshList];
+  
+  // when
+  [sut viewWillAppear:YES];
+}
+
+- (void)test___viewWillAppear__showsProgressHUD
 {
   // given
   mockProgressHUD = OCMClassMock([MBProgressHUD class]);
   OCMExpect([mockProgressHUD showHUDAddedTo:sut.navigationController.view animated:YES]);
   
   // when
-  [sut viewDidLoad];
+  [sut viewWillAppear:YES];
   
   // then
   OCMVerifyAll(mockProgressHUD);
 }
 
-- (void)test___viewDidLoad___loadsReportsWithOffsetZero
+- (void)test___viewWillAppear___loadsReportsWithOffsetZero
 {
+  // when
+  [sut viewWillAppear:YES];
+  
   // then
   OCMVerify([dataSource AMRefreshingTableViewController:sut
                                     listItemsWithOffset:0
@@ -225,28 +243,30 @@
                                                 failure:[OCMArg any]]);
 }
 
-- (void)test___viewDidLoad___givenSuccess_setsUpReportStubsArray
+- (void)test___viewWillAppear___givenSuccess_setsUpReportStubsArray
 {
+  // when
+  [sut viewWillAppear:YES];
+  
   // then
   expect(sut.listItemsArray).to.equal(listItemsArray);
   expect(sut.listItemsArray.count).to.equal(15);
   expect(sut.lastPageLoaded = 1);
 }
 
-
-- (void)test___viewDidLoad___givenSuccess_hidesProgressHUD
+- (void)test___viewWillAppear___givenSuccess_hidesProgressHUD
 {
   mockProgressHUD = OCMClassMock([MBProgressHUD class]);
   OCMExpect([mockProgressHUD hideAllHUDsForView:sut.navigationController.view animated:YES]);
   
   // when
-  [sut viewDidLoad];
+  [sut viewWillAppear:YES];
   
   // then
   OCMVerifyAll(mockProgressHUD);
 }
 
-- (void)test___viewDidLoad___givenFailure_hidesProgressHUD
+- (void)test___viewWillAppear___givenFailure_hidesProgressHUD
 {
   // given
   mockProgressHUD = OCMClassMock([MBProgressHUD class]);
@@ -255,32 +275,94 @@
   [self givenDataSourceWithFailure];
   
   // when
-  [sut viewDidLoad];
+  [sut viewWillAppear:YES];
   
   // then
   OCMVerifyAll(mockProgressHUD);
 }
 
-#pragma mark - Load Next Reports - Tests
 
-- (void)test___loadNextReports___changesLastPageLoaded
+#pragma mark - Refresh List - Tests
+
+- (void)test___refreshList___givenFullPageOfListItems__addsInfiniteScroll
 {
   // when
+  [sut refreshList];
+  
+  // then
+  expect(sut.hasInfiniteScroll).to.equal(YES);
+}
+
+- (void)test___refreshList___givenNotFullPageOfListItems__addsInfiniteScroll
+{
+  // given
+  [self givenDataSourceWithQuantity:5];
+  
+  // when
+  [sut refreshList];
+  
+  // then
+  expect(sut.hasInfiniteScroll).to.equal(NO);
+}
+
+#pragma mark - Load Next Items - Tests
+
+- (void)test___loadNextItems___changesLastPageLoaded
+{
+  // when
+  [sut viewWillAppear:YES];
   [sut loadNextItems];
   
   // then
   expect(sut.lastPageLoaded).to.equal(2);
 }
 
-- (void)test___loadNextReports___addsNewReportStubsToArray
+- (void)test___loadNextItems___addsNewItemsToArray
 {
   // when
+  [sut viewWillAppear:YES];
   [sut loadNextItems];
   
   // then
   expect(sut.listItemsArray.count).to.equal(30);
   id <AMRefreshingListItemProtocol> listItem = sut.listItemsArray[9];
   expect([listItem itemTitle]).to.equal(@"Item 10 Title");
+}
+
+- (void)test___loadNextItems__givenLastPageNotFull__doesNotLoadNewItems
+{
+  // given
+  [sut viewDidAppear:YES];
+  
+  sut.lastPageLoaded = 1;
+  sut.listItemsPerPage = 10;
+  OCMStub([mockSUT listItemsArray]).andReturn(@[]);
+  
+  
+  [[dataSource reject] AMRefreshingTableViewController:sut
+                                   listItemsWithOffset:10
+                                              quantity:10
+                                               success:[OCMArg any]
+                                               failure:[OCMArg any]];
+  
+  // when
+  [sut loadNextItems];
+}
+
+- (void)test___loadNextItems__givenLastPageNotFull__finishesInfiniteScroll
+{
+  // given
+  [sut viewDidAppear:YES];
+  
+  sut.lastPageLoaded = 1;
+  sut.listItemsPerPage = 10;
+  OCMStub([mockSUT listItemsArray]).andReturn(@[]);
+  
+  // when
+  [sut loadNextItems];
+  
+  // then
+  OCMVerify([mockTableView finishInfiniteScroll]);
 }
 
 #pragma mark - UITableViewDataSource - Tests
@@ -329,6 +411,7 @@
                                  ALImageCellSecondaryImageURLKey: expectedSecondaryURL};
   
   // when
+  [sut viewWillAppear:YES];
   id mockCell = OCMClassMock([ALImageCell class]);
   [sut tableView:sut.tableView configureCell:mockCell atIndexPath:indexPath];
   

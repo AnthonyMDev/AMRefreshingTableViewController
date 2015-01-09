@@ -37,6 +37,12 @@
 
 static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCellIdentifier";
 
+@interface AMRefreshingTableViewController ()
+
+@property (assign, nonatomic) BOOL hasInfiniteScroll;
+
+@end
+
 @implementation AMRefreshingTableViewController
 
 #pragma mark - Object Lifecycle
@@ -60,7 +66,6 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   [super viewDidLoad];
   
   [self setUpPullToRefreshView];
-  [self setUpInfiniteScroll];
   [self setUpCellFactory];
   
 }
@@ -72,16 +77,6 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
     [self refreshList];
     
   }
-}
-
-- (void)setUpInfiniteScroll
-{
-  __weak typeof(self) weakSelf = self;
-  [self.tableView addInfiniteScrollWithHandler:^(UIScrollView* scrollView) {
-    __strong typeof(weakSelf) strongSelf = weakSelf;
-    
-    [strongSelf loadNextItems];
-  }];
 }
 
 - (void)setUpCellFactory
@@ -96,6 +91,8 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   return @{AMRefreshingListItemCellIdentifier: [ALTableViewCellNibFactory menuCellNib]};
 }
 
+#pragma mark - Refreshing List
+
 - (void)refreshList
 {
   __weak typeof(self) weakSelf = self;
@@ -104,26 +101,32 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
                                listItemsWithOffset:0
                                           quantity:self.listItemsPerPage
                                            success:^(NSArray *reportList) {
-                        
+                                             
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
-                        
+                                             
                                              strongSelf.listItemsArray = [NSMutableArray arrayWithArray:reportList];
-                        
+                                             
                                              strongSelf.lastPageLoaded = 1;
                                              [strongSelf.tableView reloadData];
-                                             [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
-                                             [strongSelf.pullToRefreshView endRefreshing];
-                        
+                                             
+                                             [strongSelf finishRefreshingList];
+                                             
                                            }
                                            failure:^(NSError *error) {
-                        
+                                             
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
-
-                                             [MBProgressHUD hideAllHUDsForView:strongSelf.navigationController.view animated:YES];
-                                             [strongSelf.pullToRefreshView endRefreshing];
+                                             
+                                             [strongSelf finishRefreshingList];
                                              [strongSelf displayRefreshFailureAlert];
-
+                                             
                                            }];
+}
+
+- (void)finishRefreshingList
+{
+  [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+  [self.pullToRefreshView endRefreshing];
+  [self toggleInfiniteScroll];
 }
 
 - (void)displayRefreshFailureAlert
@@ -136,35 +139,75 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   [alertView show];
 }
 
+#pragma mark - Infinite Scroll
+
+- (void)toggleInfiniteScroll
+{
+  if ([self shouldHaveInfiniteScroll] && !self.hasInfiniteScroll) {
+    [self addInfiniteScroll];
+    
+  } else if (![self shouldHaveInfiniteScroll] && self.hasInfiniteScroll) {
+    [self removeInfiniteScroll];
+  }
+}
+
+- (BOOL)shouldHaveInfiniteScroll
+{
+  return self.listItemsArray.count >= self.listItemsPerPage;
+}
+
+- (void)addInfiniteScroll
+{
+  self.hasInfiniteScroll = YES;
+  __weak typeof(self) weakSelf = self;
+  [self.tableView addInfiniteScrollWithHandler:^(UIScrollView* scrollView) {
+    __strong typeof(weakSelf) strongSelf = weakSelf;
+    
+    [strongSelf loadNextItems];
+  }];
+}
+
+- (void)removeInfiniteScroll
+{
+  self.hasInfiniteScroll = NO;
+  [self.tableView removeInfiniteScroll];
+}
+
+#pragma mark - Load Next Items
+
 - (void)loadNextItems
 {
   NSUInteger offset = self.lastPageLoaded * self.listItemsPerPage;
+  if (offset > self.listItemsArray.count) {
+    [self.tableView finishInfiniteScroll];
+    return;
+  }
   
   __weak typeof(self) weakSelf = self;
   [self.dataSource AMRefreshingTableViewController:self
                                listItemsWithOffset:offset
                                           quantity:self.listItemsPerPage
                                            success:^(NSArray *itemList) {
-                                   
+                                             
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
-    
+                                             
                                              [self.listItemsArray addObjectsFromArray:itemList];
-    
+                                             
                                              NSArray *newIndexPaths = [strongSelf newIndexPathsArrayWithItemList:itemList
-                                                                                                     offset:offset];
+                                                                                                          offset:offset];
                                              [self.tableView insertRowsAtIndexPaths:newIndexPaths
-                                                            withRowAnimation:UITableViewRowAnimationAutomatic];
-                                   
+                                                                   withRowAnimation:UITableViewRowAnimationAutomatic];
+                                             
                                              strongSelf.lastPageLoaded ++;
                                              [strongSelf.tableView finishInfiniteScroll];
-                                   
+                                             
                                            }
                                            failure:^(NSError *error) {
-                                   
+                                             
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
-    
+                                             
                                              [strongSelf.tableView finishInfiniteScroll];
-                                   
+                                             
                                            }];
 }
 
