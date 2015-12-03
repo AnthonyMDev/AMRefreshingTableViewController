@@ -1,4 +1,4 @@
-platform :ios, "7.0"
+platform :ios, "8.0"
 inhibit_all_warnings!
 
 source 'https://github.com/CocoaPods/Specs.git'
@@ -16,6 +16,8 @@ target :AMRefreshingTableViewController do
 end
 
 target :AMRefreshingTableViewControllerTests do
+  import_pods
+  
   pod 'Expecta', '~> 0.3'
   pod 'Expecta+LayoutConstraints', '~> 0.1'
   pod 'OCMock', '~> 3.0'

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		82427914B50841328A1FAE07 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA13EB9A61460CBA364BFA /* libPods-AMRefreshingTableViewControllerTests.a */; };
-		925E7D7D199D641300BC7170 /* AMRefreshingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 925E7D7C199D641300BC7170 /* AMRefreshingTableViewController.m */; };
 		92815B64199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */; };
+		92B6AD6F1C10CB58007AF275 /* AMRefreshingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B6AD6C1C10CB58007AF275 /* AMRefreshingTableViewController.m */; };
 		92DEA71E199D44B8004E919A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA71D199D44B8004E919A /* Foundation.framework */; };
 		92DEA72C199D44B8004E919A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA72B199D44B8004E919A /* XCTest.framework */; };
 		92DEA72D199D44B8004E919A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA71D199D44B8004E919A /* Foundation.framework */; };
@@ -47,18 +47,18 @@
 		7869EA3752284568833E53C5 /* libPods-AMRefreshingTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMRefreshingTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A77448185C277E3E1754519 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
 		83B44C1CE15449FC8228D101 /* libPods-AOReportListViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AOReportListViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		920B102D19B79A990067D699 /* AMRefreshingTableViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewControllerDelegate.h; sourceTree = "<group>"; };
-		92375E4119B65CA40096FB95 /* AMRefreshingListItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRefreshingListItemProtocol.h; sourceTree = "<group>"; };
-		925E7D7B199D641300BC7170 /* AMRefreshingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewController.h; sourceTree = "<group>"; };
-		925E7D7C199D641300BC7170 /* AMRefreshingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMRefreshingTableViewController.m; sourceTree = "<group>"; };
 		92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMRefreshingTableViewControllerTests.m; sourceTree = "<group>"; };
 		9291D8A91A5F73AB0097592B /* AMRefreshingTableViewController_TestExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewController_TestExtension.h; sourceTree = "<group>"; };
 		9291D8AA1A5F75100097592B /* libPods-AMRefreshingTableViewController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AMRefreshingTableViewController.a"; path = "Pods/build/Debug-iphoneos/libPods-AMRefreshingTableViewController.a"; sourceTree = "<group>"; };
 		9291D8AC1A5F752B0097592B /* libPods-AMRefreshingTableViewController-AutoLayoutCells.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AMRefreshingTableViewController-AutoLayoutCells.a"; path = "Pods/build/Debug-iphoneos/libPods-AMRefreshingTableViewController-AutoLayoutCells.a"; sourceTree = "<group>"; };
-		92BCBA0119B8FA0700B835E1 /* AMRefreshingTableViewControllerDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewControllerDataSource.h; sourceTree = "<group>"; };
+		92B6AD691C10CB58007AF275 /* AMRefreshingListItemProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMRefreshingListItemProtocol.h; path = Core/AMRefreshingListItemProtocol.h; sourceTree = "<group>"; };
+		92B6AD6B1C10CB58007AF275 /* AMRefreshingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMRefreshingTableViewController.h; path = Core/AMRefreshingTableViewController.h; sourceTree = "<group>"; };
+		92B6AD6C1C10CB58007AF275 /* AMRefreshingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMRefreshingTableViewController.m; path = Core/AMRefreshingTableViewController.m; sourceTree = "<group>"; };
+		92B6AD6D1C10CB58007AF275 /* AMRefreshingTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMRefreshingTableViewControllerDataSource.h; path = Core/AMRefreshingTableViewControllerDataSource.h; sourceTree = "<group>"; };
+		92B6AD6E1C10CB58007AF275 /* AMRefreshingTableViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMRefreshingTableViewControllerDelegate.h; path = Core/AMRefreshingTableViewControllerDelegate.h; sourceTree = "<group>"; };
+		92B6AD741C10CC2E007AF275 /* AMRefreshingTableViewController-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AMRefreshingTableViewController-Prefix.pch"; sourceTree = "<group>"; };
 		92DEA71A199D44B8004E919A /* libAMRefreshingTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAMRefreshingTableViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DEA71D199D44B8004E919A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		92DEA721199D44B8004E919A /* AMRefreshingTableViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AMRefreshingTableViewController-Prefix.pch"; sourceTree = "<group>"; };
 		92DEA72A199D44B8004E919A /* AMRefreshingTableViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AMRefreshingTableViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DEA72B199D44B8004E919A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		92DEA72E199D44B8004E919A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -108,11 +108,21 @@
 		9212C4F5199ECBD300533314 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				92375E4119B65CA40096FB95 /* AMRefreshingListItemProtocol.h */,
-				920B102D19B79A990067D699 /* AMRefreshingTableViewControllerDelegate.h */,
-				92BCBA0119B8FA0700B835E1 /* AMRefreshingTableViewControllerDataSource.h */,
+				92B6AD691C10CB58007AF275 /* AMRefreshingListItemProtocol.h */,
+				92B6AD6D1C10CB58007AF275 /* AMRefreshingTableViewControllerDataSource.h */,
+				92B6AD6E1C10CB58007AF275 /* AMRefreshingTableViewControllerDelegate.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		92B6AD701C10CB6A007AF275 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9212C4F5199ECBD300533314 /* Protocols */,
+				92B6AD6B1C10CB58007AF275 /* AMRefreshingTableViewController.h */,
+				92B6AD6C1C10CB58007AF275 /* AMRefreshingTableViewController.m */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		92DEA711199D44B8004E919A = {
@@ -154,9 +164,7 @@
 		92DEA71F199D44B8004E919A /* AMRefreshingTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9212C4F5199ECBD300533314 /* Protocols */,
-				925E7D7B199D641300BC7170 /* AMRefreshingTableViewController.h */,
-				925E7D7C199D641300BC7170 /* AMRefreshingTableViewController.m */,
+				92B6AD701C10CB6A007AF275 /* Core */,
 				92DEA720199D44B8004E919A /* Supporting Files */,
 			);
 			path = AMRefreshingTableViewController;
@@ -165,7 +173,7 @@
 		92DEA720199D44B8004E919A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				92DEA721199D44B8004E919A /* AMRefreshingTableViewController-Prefix.pch */,
+				92B6AD741C10CC2E007AF275 /* AMRefreshingTableViewController-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -238,7 +246,7 @@
 		92DEA712199D44B8004E919A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "App-Order, LLC";
 			};
 			buildConfigurationList = 92DEA715199D44B8004E919A /* Build configuration list for PBXProject "AMRefreshingTableViewController" */;
@@ -353,7 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				925E7D7D199D641300BC7170 /* AMRefreshingTableViewController.m in Sources */,
+				92B6AD6F1C10CB58007AF275 /* AMRefreshingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +412,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -418,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -449,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -483,11 +492,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0D5102A06AED1332703F041 /* Pods-AMRefreshingTableViewControllerTests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -495,10 +499,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "AMRefreshingTableViewControllerTests/AMRefreshingTableViewControllerTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anthonymdev.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = AMRefreshingTableViewControllerTests;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -508,18 +509,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A77448185C277E3E1754519 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
 				INFOPLIST_FILE = "AMRefreshingTableViewControllerTests/AMRefreshingTableViewControllerTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anthonymdev.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = AMRefreshingTableViewControllerTests;
 				WRAPPER_EXTENSION = xctest;
 			};

@@ -63,12 +63,14 @@ typedef void (^AMRefreshingListOperationFailureBlock)(NSError *error);
  *  @param tableViewController The `AMRefreshingTableViewController` requesting the list items
  *  @param offset              The offset in the items retrieved
  *  @param quantity            The number of list items to return
+ *  @param searchTerm          The optional search term to filter the results by
  *  @param success             The success block to be called, returning an `NSArray` of list items that conform to the `AMRefreshingListItemProtocol`.
  *  @param failure             The failure block to be called, returning an `NSError`
  */
 - (void)AMRefreshingTableViewController:(AMRefreshingTableViewController *)tableViewController
                     listItemsWithOffset:(NSUInteger)offset
                                quantity:(NSUInteger)quantity
+                             searchTerm:(NSString *)searchTerm
                                 success:(AMRefreshingListOperationSuccessBlock)success
                                 failure:(AMRefreshingListOperationFailureBlock)failure;
 

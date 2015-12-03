@@ -34,7 +34,7 @@
 /**
  * `AMRefreshingTableViewController` is a `UITableViewController` that allows you to display a list of items retrived from an external data source. This controller supports asynchronous data retrieval and has pull to refresh and infinite scrolling capabilities.
  */
-@interface AMRefreshingTableViewController : UITableViewController <ALTableViewCellFactoryDelegate, AMPullToRefreshDelegate>
+@interface AMRefreshingTableViewController : UITableViewController <ALTableViewCellFactoryDelegate, AMPullToRefreshDelegate, UISearchResultsUpdating>
 
 /**
  *  Initializes an instance of `AMRefreshingTableViewController` with a given data source and a number of list items to display per page.
@@ -43,10 +43,13 @@
  *
  *  @param dataSource       The data source for the controller
  *  @param listItemsPerPage The number of list items to display per page
+ *  @param enableSearch     A boolean value indicating if searching should be enabled for the view controller
  *
  *  @return An instance of `AMRefreshingTableViewController`
  */
-- (instancetype)initWithDataSource:(id <AMRefreshingTableViewControllerDataSource>)dataSource listItemsPerPage:(NSUInteger)listItemsPerPage;
+- (instancetype)initWithDataSource:(id <AMRefreshingTableViewControllerDataSource>)dataSource
+                  listItemsPerPage:(NSUInteger)listItemsPerPage
+                      enableSearch:(BOOL)enableSearch;
 
 /**
  *  This method load an additional page of list items and inserts them at the bottom of the table view. This method is called automatically when infinite scroll is activated.
@@ -89,5 +92,12 @@
  *  The `ALTableViewCellFactory` used to create and configure the table view cells for the controller.
  */
 @property (strong, nonatomic) ALTableViewCellFactory *cellFactory;
+
+/**
+ *  The `UISearchController` to be displayed in the table header view.
+ *
+ *  @note If search is not enabled, this will be `nil`.
+ */
+@property (strong, nonatomic) UISearchController *searchController;
 
 @end

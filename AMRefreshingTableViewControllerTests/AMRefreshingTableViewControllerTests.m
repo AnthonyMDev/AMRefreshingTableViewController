@@ -66,7 +66,7 @@
 {
   [super setUp];
   
-  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:nil listItemsPerPage:15];
+  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:nil listItemsPerPage:15 enableSearch:NO];
   navController = [[UINavigationController alloc] initWithRootViewController:sut];
   mockSUT = OCMPartialMock(sut);
   mockTableView = OCMPartialMock(sut.tableView);
@@ -85,12 +85,13 @@
   OCMStub([dataSource AMRefreshingTableViewController:sut
                                   listItemsWithOffset:0
                                              quantity:sut.listItemsPerPage
+                                           searchTerm:[OCMArg any]
                                               success:[OCMArg any]
                                               failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
     
     AMRefreshingListOperationSuccessBlock success;
     
-    [invocation getArgument:&success atIndex:5];
+    [invocation getArgument:&success atIndex:6];
     [self givenListItemsArrayWithOffset:0 quantity:quantity];
     
     success(listItemsArray);
@@ -100,12 +101,13 @@
   OCMStub([dataSource AMRefreshingTableViewController:sut
                                  listItemsWithOffset:15
                                              quantity:sut.listItemsPerPage
+                                           searchTerm:[OCMArg any]
                                               success:[OCMArg any]
                                               failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
     
     AMRefreshingListOperationSuccessBlock success;
     
-    [invocation getArgument:&success atIndex:5];
+    [invocation getArgument:&success atIndex:6];
     [self givenListItemsArrayWithOffset:15 quantity:quantity];
     
     success(listItemsArray);
@@ -123,15 +125,18 @@
   OCMStub([dataSource AMRefreshingTableViewController:sut
                                   listItemsWithOffset:0
                                              quantity:sut.listItemsPerPage
+                                           searchTerm:[OCMArg any]
                                               success:[OCMArg any]
                                               failure:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
     
     AMRefreshingListOperationFailureBlock failure;
     
-    [invocation getArgument:&failure atIndex:6];
+    [invocation getArgument:&failure atIndex:7];
     
     NSError *error = [NSError errorWithDomain:@"test" code:1 userInfo:nil];
-    failure(error);
+    
+    AMRefreshingListOperationFailureBlock failureBlock = failure;
+    failureBlock(error);
     
   });
   
@@ -173,7 +178,7 @@
 - (void)test___initsWithDataSource
 {
   // when
-  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:dataSource listItemsPerPage:10];
+  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:dataSource listItemsPerPage:10 enableSearch:NO];
   
   // then
   expect(sut.dataSource).to.equal(dataSource);
@@ -196,6 +201,32 @@
   // then
   expect(sut.cellFactory).to.beInstanceOf([ALTableViewCellFactory class]);
   expect(sut.cellFactory.delegate).to.equal(sut);
+}
+
+- (void)test___viewDidLoad___givenSearchNotEnabled__doesNotSetUpSearchController
+{
+  // then
+  expect(sut.searchController).to.beNil();
+}
+
+- (void)test___viewDidLoad___givenSearchEnabled__doesSetsUpSearchControllerAsTableHeaderView
+{
+  // given
+  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:dataSource listItemsPerPage:10 enableSearch:YES];
+  
+  // when
+  [sut viewDidLoad];
+  
+  // then
+  expect(sut.definesPresentationContext).to.beTruthy;
+  expect(sut.searchController).toNot.beNil;
+  expect(sut.searchController.searchResultsController).to.beNil;
+  expect(sut.searchController.searchResultsUpdater).to.beIdenticalTo(sut);
+  expect(sut.searchController.dimsBackgroundDuringPresentation).to.beFalsy;
+  expect(sut.searchController.hidesNavigationBarDuringPresentation).to.beFalsy;
+  expect(sut.searchController.searchBar.showsCancelButton).to.beTruthy;
+  
+  expect(sut.tableView.tableHeaderView).to.beIdenticalTo(sut.searchController.searchBar);
 }
 
 - (void)test___viewWillAppear__givenDataSource_refreshesList
@@ -239,6 +270,7 @@
   OCMVerify([dataSource AMRefreshingTableViewController:sut
                                     listItemsWithOffset:0
                                                quantity:sut.listItemsPerPage
+                                             searchTerm:[OCMArg any]
                                                 success:[OCMArg any]
                                                 failure:[OCMArg any]]);
 }
@@ -305,6 +337,27 @@
   expect(sut.hasInfiniteScroll).to.equal(NO);
 }
 
+- (void)test___refreshList___givenSearchTerm__callsDataSourceWithOffsetZeroAndSearchTerm
+{
+  // given
+  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:dataSource listItemsPerPage:10 enableSearch:YES];
+  [sut viewDidLoad];
+  
+  NSString *expectedSearchTerm = @"Test Search Term";
+  sut.searchController.searchBar.text = expectedSearchTerm;
+  
+  // when
+  [sut refreshList];
+  
+  // then
+  OCMVerify([dataSource AMRefreshingTableViewController:sut
+                                    listItemsWithOffset:0
+                                               quantity:sut.listItemsPerPage
+                                             searchTerm:expectedSearchTerm
+                                                success:[OCMArg any]
+                                                failure:[OCMArg any]]);
+}
+
 #pragma mark - Load Next Items - Tests
 
 - (void)test___loadNextItems___changesLastPageLoaded
@@ -320,7 +373,7 @@
 - (void)test___loadNextItems___addsNewItemsToArray
 {
   // when
-  [sut viewWillAppear:YES];
+  [sut viewWillAppear:NO];
   [sut loadNextItems];
   
   // then
@@ -332,7 +385,7 @@
 - (void)test___loadNextItems__givenLastPageNotFull__doesNotLoadNewItems
 {
   // given
-  [sut viewDidAppear:YES];
+  [sut viewDidAppear:NO];
   
   sut.lastPageLoaded = 1;
   sut.listItemsPerPage = 10;
@@ -342,6 +395,7 @@
   [[dataSource reject] AMRefreshingTableViewController:sut
                                    listItemsWithOffset:10
                                               quantity:10
+                                            searchTerm:[OCMArg any]
                                                success:[OCMArg any]
                                                failure:[OCMArg any]];
   
@@ -352,7 +406,7 @@
 - (void)test___loadNextItems__givenLastPageNotFull__finishesInfiniteScroll
 {
   // given
-  [sut viewDidAppear:YES];
+  [sut viewDidAppear:NO];
   
   sut.lastPageLoaded = 1;
   sut.listItemsPerPage = 10;
@@ -363,6 +417,27 @@
   
   // then
   OCMVerify([mockTableView finishInfiniteScroll]);
+}
+
+- (void)test___loadNextItems___givenSearchTerm__callsDataSourceWithSearchTerm
+{
+  // given
+  sut = [[AMRefreshingTableViewController alloc] initWithDataSource:dataSource listItemsPerPage:10 enableSearch:YES];
+  [sut viewDidLoad];
+  
+  NSString *expectedSearchTerm = @"Test Search Term";
+  sut.searchController.searchBar.text = expectedSearchTerm;
+  
+  // when
+  [sut loadNextItems];
+  
+  // then
+  OCMVerify([dataSource AMRefreshingTableViewController:sut
+                                    listItemsWithOffset:0
+                                               quantity:sut.listItemsPerPage
+                                             searchTerm:expectedSearchTerm
+                                                success:[OCMArg any]
+                                                failure:[OCMArg any]]);
 }
 
 #pragma mark - UITableViewDataSource - Tests
@@ -425,6 +500,17 @@
 {
   // when
   [sut refreshViewDidBeginRefreshing:sut.pullToRefreshView];
+  
+  // then
+  OCMVerify([mockSUT refreshList]);
+}
+
+#pragma mark - UISearchResultsUpdating - Tests
+
+- (void)test___updateSearchResultsForSearchController___refreshesListItems
+{
+  // when
+  [sut updateSearchResultsForSearchController:sut.searchController];
   
   // then
   OCMVerify([mockSUT refreshList]);

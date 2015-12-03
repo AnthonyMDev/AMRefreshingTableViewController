@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.platform     = :ios
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
   s.name         = "AMRefreshingTableViewController"
-  s.version      = "0.2.5"
+  s.version      = "1.0.0"
   s.summary      = "A table view controller that loads items from an external (networked) data source."
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Anthony Miller" => "AnthonyMDev@gmail.com" }
@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   s.requires_arc = true
 
+  s.source_files = "AMRefreshingTableViewController/Core/*.{h,m}"
+
   s.dependency 'AMPullToRefresh', '~> 1.0'
   s.dependency 'AutoLayoutCells', '~> 0.6'
   s.dependency 'MBProgressHUD', '~> 0.8'
   s.dependency 'UIScrollView-InfiniteScroll', '~> 0.2'
 
-  s.resource_bundles = {'AMRefreshingTableViewController' => ['AMRefreshingTableViewController/ResourcesBundle/*/*']}
-  s.source_files = "AMRefreshingTableViewController/*.{h,m}"
 end

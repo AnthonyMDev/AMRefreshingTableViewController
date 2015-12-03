@@ -24,6 +24,8 @@
 
 #import "AMRefreshingTableViewController.h"
 
+#import <UIKit/UISearchController.h>
+
 #import <AutoLayoutCells/ALTableViewCellNibFactory.h>
 #import <AutoLayoutCells/ALCellConstants.h>
 #import <AutoLayoutCells/ALImageCellConstants.h>
@@ -41,19 +43,24 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 
 @property (assign, nonatomic) BOOL hasInfiniteScroll;
 
+@property (assign, nonatomic) BOOL searchEnabled;
+
 @end
 
 @implementation AMRefreshingTableViewController
 
 #pragma mark - Object Lifecycle
 
-- (instancetype)initWithDataSource:(id<AMRefreshingTableViewControllerDataSource>)dataSource listItemsPerPage:(NSUInteger)listItemsPerPage
+- (instancetype)initWithDataSource:(id<AMRefreshingTableViewControllerDataSource>)dataSource
+                  listItemsPerPage:(NSUInteger)listItemsPerPage
+                      enableSearch:(BOOL)enableSearch
 {
   self = [super init];
   
   if (self) {
     self.dataSource = dataSource;
     self.listItemsPerPage = listItemsPerPage;
+    self.searchEnabled = enableSearch;
   }
   
   return self;
@@ -67,7 +74,30 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   
   [self setUpPullToRefreshView];
   [self setUpCellFactory];
-  
+  [self setUpSearchController];
+}
+
+- (void)setUpCellFactory
+{
+  self.cellFactory = [[ALTableViewCellFactory alloc]initWithTableView:self.tableView
+                                          identifiersToNibsDictionary:[self identifiersToNibsDictionary]];
+  self.cellFactory.delegate = self;
+}
+
+- (void)setUpSearchController
+{
+  if (self.searchEnabled) {
+    self.definesPresentationContext = YES;
+    
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.hidesNavigationBarDuringPresentation = NO;
+    self.searchController.searchBar.showsCancelButton = YES;
+    
+    [self.searchController.searchBar sizeToFit];
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -77,13 +107,6 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
     [self refreshList];
     
   }
-}
-
-- (void)setUpCellFactory
-{
-  self.cellFactory = [[ALTableViewCellFactory alloc]initWithTableView:self.tableView
-                                          identifiersToNibsDictionary:[self identifiersToNibsDictionary]];
-  self.cellFactory.delegate = self;
 }
 
 - (NSDictionary *)identifiersToNibsDictionary
@@ -100,6 +123,7 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   [self.dataSource AMRefreshingTableViewController:self
                                listItemsWithOffset:0
                                           quantity:self.listItemsPerPage
+                                        searchTerm:self.searchController.searchBar.text
                                            success:^(NSArray *reportList) {
                                              
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -187,6 +211,7 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
   [self.dataSource AMRefreshingTableViewController:self
                                listItemsWithOffset:offset
                                           quantity:self.listItemsPerPage
+                                        searchTerm:self.searchController.searchBar.text
                                            success:^(NSArray *itemList) {
                                              
                                              __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -304,6 +329,13 @@ static NSString * AMRefreshingListItemCellIdentifier = @"AMRefreshingListItemCel
 #pragma mark - AMPullToRefreshDelegate
 
 - (void)refreshViewDidBeginRefreshing:(AMPullToRefreshView *)pullToRefreshView
+{
+  [self refreshList];
+}
+
+#pragma mark - UISearchResultsUpdating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
   [self refreshList];
 }
