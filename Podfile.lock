@@ -1,21 +1,23 @@
 PODS:
   - ALLabel (2.0.0)
   - AMPullToRefresh (1.0.0)
-  - AutoLayoutCells (0.6.1):
-    - AutoLayoutCells/SharedCategories (= 0.6.1)
-    - AutoLayoutCells/TableViewCells (= 0.6.1)
-  - AutoLayoutCells/SharedCategories (0.6.1)
-  - AutoLayoutCells/TableViewCells (0.6.1):
+  - AutoLayoutCells (0.9.0):
+    - AutoLayoutCells/SharedCategories (= 0.9.0)
+    - AutoLayoutCells/TableViewCells (= 0.9.0)
+  - AutoLayoutCells/SharedCategories (0.9.0):
+    - UIImageView+ALActivityIndicatorView (~> 1.0)
+  - AutoLayoutCells/TableViewCells (0.9.0):
     - ALLabel (~> 2.0)
     - AutoLayoutCells/SharedCategories
     - AutoLayoutTextViews (~> 1.1)
-  - AutoLayoutTextViews (1.1.1)
-  - Expecta (0.3.1)
+  - AutoLayoutTextViews (1.2.3)
+  - Expecta (0.4.2)
   - Expecta+LayoutConstraints (0.1.0):
     - Expecta (~> 0.3)
-  - MBProgressHUD (0.9)
-  - OCMock (3.1.2)
-  - UIScrollView-InfiniteScroll (0.5.1)
+  - MBProgressHUD (0.9.1)
+  - OCMock (3.2)
+  - UIImageView+ALActivityIndicatorView (1.0.0)
+  - UIScrollView-InfiniteScroll (0.7.3)
   - XMLDictionary (1.4)
 
 DEPENDENCIES:
@@ -29,15 +31,16 @@ DEPENDENCIES:
   - XMLDictionary (~> 1.4)
 
 SPEC CHECKSUMS:
-  ALLabel: 1648e80a140ce2727bd93a1fd8ead1939d5ce12b
-  AMPullToRefresh: 339a199d50ae02a7a2a73bdf08824133200aea70
-  AutoLayoutCells: cf8c73324052b023e1bf8a4120ac885c0b5527ef
-  AutoLayoutTextViews: 955f34ca57834fde02568390da36b6fb4163707d
-  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  ALLabel: 0f527f4f5445f4b9fac4d78bf28655f88908bd93
+  AMPullToRefresh: 40ca9c74acfcbcddb396e5c3ddef50aa3ad13f4b
+  AutoLayoutCells: bc22da5fc3d6a69cc92a8331149baf45537d760b
+  AutoLayoutTextViews: 50d76d8938f263794e3344ee6876001f806c7cda
+  Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
   Expecta+LayoutConstraints: c27575a56faf193c10ac989fb825c325831625ff
-  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
-  UIScrollView-InfiniteScroll: c0ac8b4eece15d7c811622da605151cbd22db7f5
-  XMLDictionary: 735e81b9a043e220b0d24e9d4f16719606f2e0fc
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  OCMock: 28def049ef47f996b515a8eeea958be7ccab2dbb
+  UIImageView+ALActivityIndicatorView: f38f2c19ed2927e0b359201c143f25628ce30711
+  UIScrollView-InfiniteScroll: b6c7d6d155dca7f9c5dd43813ecffeb301b3d50c
+  XMLDictionary: f9f51601ba76678b594ab485f2b00ec1fed23724
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.39.0

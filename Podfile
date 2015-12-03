@@ -1,6 +1,9 @@
 platform :ios, "7.0"
 inhibit_all_warnings!
 
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://bitbucket.org/app-order/ao-private-cocoapods.git'
+
 def import_pods
   pod 'AMPullToRefresh', '~> 1.0'
   pod 'AutoLayoutCells', '~> 0.6'
