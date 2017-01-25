@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.dependency 'AMPullToRefresh', '~> 1.0'
   s.dependency 'AutoLayoutCells', '~> 0.11.0-beta5'
   s.dependency 'MBProgressHUD', '~> 0.8'
-  s.dependency 'UIScrollView-InfiniteScroll', '~> 0.2'
+  s.dependency 'UIScrollView-InfiniteScroll', '~> 0.9'
 
 end

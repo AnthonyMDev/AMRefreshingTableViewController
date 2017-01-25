@@ -8,7 +8,7 @@ def import_pods
   pod 'AMPullToRefresh', '~> 1.0'
   pod 'AutoLayoutCells', '~> 0.11.0-beta5'
   pod 'MBProgressHUD', '~> 0.8'
-  pod 'UIScrollView-InfiniteScroll', '~> 0.2'
+  pod 'UIScrollView-InfiniteScroll', '~> 0.9'
 end
 
 target :AMRefreshingTableViewController do

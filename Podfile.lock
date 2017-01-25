@@ -27,7 +27,7 @@ DEPENDENCIES:
   - Expecta+LayoutConstraints (~> 0.1)
   - MBProgressHUD (~> 0.8)
   - OCMock (~> 3.0)
-  - UIScrollView-InfiniteScroll (~> 0.2)
+  - UIScrollView-InfiniteScroll (~> 0.9)
   - XMLDictionary (~> 1.4)
 
 SPEC CHECKSUMS:
@@ -43,6 +43,6 @@ SPEC CHECKSUMS:
   UIScrollView-InfiniteScroll: 14e204c50ca4040467e1cbfa141dad7a18919b56
   XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
 
-PODFILE CHECKSUM: 661814a001490742f270cdbade5df5a9388b326a
+PODFILE CHECKSUM: 6e3befd946545a41eb06729a4c7a30a500cdf65b
 
 COCOAPODS: 1.2.0.beta.1
