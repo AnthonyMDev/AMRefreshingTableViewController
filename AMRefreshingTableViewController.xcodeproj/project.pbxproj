@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		82427914B50841328A1FAE07 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AAA13EB9A61460CBA364BFA /* libPods-AMRefreshingTableViewControllerTests.a */; };
+		350D2306D5D4467B6F6FAA77 /* libPods-AMRefreshingTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE8F25270AC8F84F06E0806 /* libPods-AMRefreshingTableViewController.a */; };
+		3AADD1207A0AB5BD2D683AD7 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED38D0D519CBDCDC8A52A482 /* libPods-AMRefreshingTableViewControllerTests.a */; };
 		92815B64199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */; };
 		92B6AD6F1C10CB58007AF275 /* AMRefreshingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B6AD6C1C10CB58007AF275 /* AMRefreshingTableViewController.m */; };
 		92DEA71E199D44B8004E919A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA71D199D44B8004E919A /* Foundation.framework */; };
@@ -16,7 +17,6 @@
 		92DEA72F199D44B8004E919A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA72E199D44B8004E919A /* UIKit.framework */; };
 		92DEA732199D44B8004E919A /* libAMRefreshingTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DEA71A199D44B8004E919A /* libAMRefreshingTableViewController.a */; };
 		92DEA738199D44B8004E919A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92DEA736199D44B8004E919A /* InfoPlist.strings */; };
-		AAE99F5FCFBB4E00B3906F6B /* libPods-AMRefreshingTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7869EA3752284568833E53C5 /* libPods-AMRefreshingTableViewController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0AAA13EB9A61460CBA364BFA /* libPods-AMRefreshingTableViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMRefreshingTableViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		485646A00569BE968BED7A16 /* Pods-AMRefreshingTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewController/Pods-AMRefreshingTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
-		7869EA3752284568833E53C5 /* libPods-AMRefreshingTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMRefreshingTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A77448185C277E3E1754519 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
-		83B44C1CE15449FC8228D101 /* libPods-AOReportListViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AOReportListViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B60B2F517AB9AE5514C9C7 /* Pods-AMRefreshingTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewController/Pods-AMRefreshingTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		2283677D92F6F0A3F1E1F248 /* Pods-AMRefreshingTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewController/Pods-AMRefreshingTableViewController.release.xcconfig"; sourceTree = "<group>"; };
+		6EEB3D9671922BAC6054DF39 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7DE8F25270AC8F84F06E0806 /* libPods-AMRefreshingTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMRefreshingTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C770886EAA6896D574DC512 /* Pods-AMRefreshingTableViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92815B63199D46F500E8D41F /* AMRefreshingTableViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMRefreshingTableViewControllerTests.m; sourceTree = "<group>"; };
 		9291D8A91A5F73AB0097592B /* AMRefreshingTableViewController_TestExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMRefreshingTableViewController_TestExtension.h; sourceTree = "<group>"; };
 		9291D8AA1A5F75100097592B /* libPods-AMRefreshingTableViewController.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AMRefreshingTableViewController.a"; path = "Pods/build/Debug-iphoneos/libPods-AMRefreshingTableViewController.a"; sourceTree = "<group>"; };
@@ -64,9 +64,7 @@
 		92DEA72E199D44B8004E919A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		92DEA735199D44B8004E919A /* AMRefreshingTableViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AMRefreshingTableViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		92DEA737199D44B8004E919A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B178F3A4E6EC47CABCEFF163 /* libPods-AOReportListViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AOReportListViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0D5102A06AED1332703F041 /* Pods-AMRefreshingTableViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D82F4732D05E35630FDDD4E1 /* Pods-AMRefreshingTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AMRefreshingTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-AMRefreshingTableViewController/Pods-AMRefreshingTableViewController.release.xcconfig"; sourceTree = "<group>"; };
+		ED38D0D519CBDCDC8A52A482 /* libPods-AMRefreshingTableViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMRefreshingTableViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92DEA71E199D44B8004E919A /* Foundation.framework in Frameworks */,
-				AAE99F5FCFBB4E00B3906F6B /* libPods-AMRefreshingTableViewController.a in Frameworks */,
+				350D2306D5D4467B6F6FAA77 /* libPods-AMRefreshingTableViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,20 +85,20 @@
 				92DEA72C199D44B8004E919A /* XCTest.framework in Frameworks */,
 				92DEA72F199D44B8004E919A /* UIKit.framework in Frameworks */,
 				92DEA72D199D44B8004E919A /* Foundation.framework in Frameworks */,
-				82427914B50841328A1FAE07 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */,
+				3AADD1207A0AB5BD2D683AD7 /* libPods-AMRefreshingTableViewControllerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7310C9ACBFB511201DF7815E /* Pods */ = {
+		32FFB94FE7B4A9759917D1B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				485646A00569BE968BED7A16 /* Pods-AMRefreshingTableViewController.debug.xcconfig */,
-				D82F4732D05E35630FDDD4E1 /* Pods-AMRefreshingTableViewController.release.xcconfig */,
-				D0D5102A06AED1332703F041 /* Pods-AMRefreshingTableViewControllerTests.debug.xcconfig */,
-				7A77448185C277E3E1754519 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */,
+				15B60B2F517AB9AE5514C9C7 /* Pods-AMRefreshingTableViewController.debug.xcconfig */,
+				2283677D92F6F0A3F1E1F248 /* Pods-AMRefreshingTableViewController.release.xcconfig */,
+				8C770886EAA6896D574DC512 /* Pods-AMRefreshingTableViewControllerTests.debug.xcconfig */,
+				6EEB3D9671922BAC6054DF39 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -132,7 +130,7 @@
 				92DEA733199D44B8004E919A /* AMRefreshingTableViewControllerTests */,
 				92DEA71C199D44B8004E919A /* Frameworks */,
 				92DEA71B199D44B8004E919A /* Products */,
-				7310C9ACBFB511201DF7815E /* Pods */,
+				32FFB94FE7B4A9759917D1B8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,10 +151,8 @@
 				92DEA71D199D44B8004E919A /* Foundation.framework */,
 				92DEA72B199D44B8004E919A /* XCTest.framework */,
 				92DEA72E199D44B8004E919A /* UIKit.framework */,
-				B178F3A4E6EC47CABCEFF163 /* libPods-AOReportListViewController.a */,
-				83B44C1CE15449FC8228D101 /* libPods-AOReportListViewControllerTests.a */,
-				7869EA3752284568833E53C5 /* libPods-AMRefreshingTableViewController.a */,
-				0AAA13EB9A61460CBA364BFA /* libPods-AMRefreshingTableViewControllerTests.a */,
+				7DE8F25270AC8F84F06E0806 /* libPods-AMRefreshingTableViewController.a */,
+				ED38D0D519CBDCDC8A52A482 /* libPods-AMRefreshingTableViewControllerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -204,11 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92DEA73D199D44B9004E919A /* Build configuration list for PBXNativeTarget "AMRefreshingTableViewController" */;
 			buildPhases = (
-				51D613023E344B118AEA991F /* Check Pods Manifest.lock */,
+				715EEDECA383052B8F1BC837 /* [CP] Check Pods Manifest.lock */,
 				92DEA716199D44B8004E919A /* Sources */,
 				92DEA717199D44B8004E919A /* Frameworks */,
 				92DEA718199D44B8004E919A /* CopyFiles */,
-				A8E414E39D2D418A9FF3D160 /* Copy Pods Resources */,
+				157D314D55EFD0C92A3AD46C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,12 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92DEA740199D44B9004E919A /* Build configuration list for PBXNativeTarget "AMRefreshingTableViewControllerTests" */;
 			buildPhases = (
-				C4ED1C16B0604D9D891666C0 /* Check Pods Manifest.lock */,
+				867E7D993C5669DF65247043 /* [CP] Check Pods Manifest.lock */,
 				92DEA726199D44B8004E919A /* Sources */,
 				92DEA727199D44B8004E919A /* Frameworks */,
 				92DEA728199D44B8004E919A /* Resources */,
-				3836D0504A6541C8990D8A6E /* Copy Pods Resources */,
-				6E31F86DFD2EA1E61F4AE36C /* Embed Pods Frameworks */,
+				0426C57CFF0DB26659EF71D1 /* [CP] Embed Pods Frameworks */,
+				84BDE8D47FD161CD8C08ED8B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,44 +275,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3836D0504A6541C8990D8A6E /* Copy Pods Resources */ = {
+		0426C57CFF0DB26659EF71D1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		51D613023E344B118AEA991F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6E31F86DFD2EA1E61F4AE36C /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,14 +290,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A8E414E39D2D418A9FF3D160 /* Copy Pods Resources */ = {
+		157D314D55EFD0C92A3AD46C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,19 +305,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AMRefreshingTableViewController/Pods-AMRefreshingTableViewController-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C4ED1C16B0604D9D891666C0 /* Check Pods Manifest.lock */ = {
+		715EEDECA383052B8F1BC837 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84BDE8D47FD161CD8C08ED8B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AMRefreshingTableViewControllerTests/Pods-AMRefreshingTableViewControllerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867E7D993C5669DF65247043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -466,7 +462,7 @@
 		};
 		92DEA73E199D44B9004E919A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 485646A00569BE968BED7A16 /* Pods-AMRefreshingTableViewController.debug.xcconfig */;
+			baseConfigurationReference = 15B60B2F517AB9AE5514C9C7 /* Pods-AMRefreshingTableViewController.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AOReportListViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -478,7 +474,7 @@
 		};
 		92DEA73F199D44B9004E919A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D82F4732D05E35630FDDD4E1 /* Pods-AMRefreshingTableViewController.release.xcconfig */;
+			baseConfigurationReference = 2283677D92F6F0A3F1E1F248 /* Pods-AMRefreshingTableViewController.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AOReportListViewController.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -490,7 +486,7 @@
 		};
 		92DEA741199D44B9004E919A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D5102A06AED1332703F041 /* Pods-AMRefreshingTableViewControllerTests.debug.xcconfig */;
+			baseConfigurationReference = 8C770886EAA6896D574DC512 /* Pods-AMRefreshingTableViewControllerTests.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
@@ -507,7 +503,7 @@
 		};
 		92DEA742199D44B9004E919A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A77448185C277E3E1754519 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */;
+			baseConfigurationReference = 6EEB3D9671922BAC6054DF39 /* Pods-AMRefreshingTableViewControllerTests.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AMRefreshingTableViewController/AMRefreshingTableViewController-Prefix.pch";
